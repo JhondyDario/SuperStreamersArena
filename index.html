@@ -4,60 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Super Streamers Arena</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Tu estilo personalizado -->
   <link rel="stylesheet" href="style.css" />
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
-<body>
-  <header>
-    <h1>Super Streamers Arena</h1>
-    <p>¡Domina el campo de batalla con tus streamers favoritos!</p>
+<body data-bs-theme="dark">
+
+  <header class="text-center p-5 bg-danger text-white">
+    <h1 data-aos="fade-down">Super Streamers Arena</h1>
+    <p data-aos="fade-up">¡Domina el campo de batalla con tus streamers favoritos!</p>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#descargar">Descargar</a></li>
-      <li><a href="#caracteristicas">Características</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
+  <!-- Navegación moderna -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SSA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#descargar">Descargar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <section id="descargar">
+  <!-- Descargas -->
+  <section id="descargar" class="container py-5 text-center" data-aos="zoom-in">
     <h2>Descargar el juego</h2>
-    <a href="SuperStreamersArena-PC.zip" class="boton">Descargar para PC</a>
-    <a href="SuperStreamersArena.apk" class="boton">Descargar para Android</a>
+    <a href="SuperStreamersArena-PC.zip" class="btn btn-primary m-2">Descargar para PC</a>
+    <a href="SuperStreamersArena.apk" class="btn btn-success m-2">Descargar para Android</a>
   </section>
 
-  <section id="caracteristicas">
+  <!-- Características -->
+  <section id="caracteristicas" class="container py-5" data-aos="fade-right">
     <h2>Características</h2>
-    <ul>
-      <li>✅ Batallas en tiempo real</li>
-      <li>✅ Personajes inspirados en streamers reales</li>
-      <li>✅ Compatible con PC y Android</li>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item bg-dark text-white">✅ Batallas en tiempo real</li>
+      <li class="list-group-item bg-dark text-white">✅ Personajes inspirados en streamers reales</li>
+      <li class="list-group-item bg-dark text-white">✅ Compatible con PC y Android</li>
     </ul>
   </section>
 
-  <section id="galeria">
+  <!-- Galería -->
+  <section id="galeria" class="container py-5 text-center" data-aos="fade-up">
     <h2>Galería</h2>
-    <img src="captura1.png" alt="Gameplay 1" />
-    <img src="captura2.png" alt="Gameplay 2" />
+    <img src="captura1.png" class="img-fluid rounded m-2" alt="Gameplay 1" />
+    <img src="captura2.png" class="img-fluid rounded m-2" alt="Gameplay 2" />
   </section>
 
-  <section id="contacto">
+  <!-- Contacto -->
+  <section id="contacto" class="container py-5" data-aos="flip-left">
     <h2>Contacto</h2>
-    <form action="https://formspree.io/f/YOUR-ID" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu email" required />
-      <textarea name="mensaje" placeholder="Mensaje..."></textarea>
-      <button type="submit">Enviar</button>
+    <form action="https://formspree.io/f/YOUR-ID" method="POST" class="needs-validation">
+      <div class="mb-3">
+        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required />
+      </div>
+      <div class="mb-3">
+        <input type="email" name="email" class="form-control" placeholder="Tu email" required />
+      </div>
+      <div class="mb-3">
+        <textarea name="mensaje" class="form-control" placeholder="Mensaje..." rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning">Enviar</button>
     </form>
   </section>
 
-  <footer>
+  <footer class="bg-dark text-center text-white py-3">
     <p>&copy; 2025 Super Streamers Arena. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- JS de Bootstrap y AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="game.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
