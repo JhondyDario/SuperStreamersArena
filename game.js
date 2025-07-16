@@ -1,11 +1,10 @@
-// game.js
-console.log("🎮 Super Streamers Arena Website cargado correctamente");
+console.log("🎮 Super Streamers Arena Website cargado con animaciones y Bootstrap");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const botones = document.querySelectorAll(".boton");
+  const botones = document.querySelectorAll(".btn");
   botones.forEach(boton => {
     boton.addEventListener("click", () => {
-      alert("¡Gracias por tu interés en Super Streamers Arena!");
+      console.log("Botón presionado:", boton.innerText);
     });
   });
 });
