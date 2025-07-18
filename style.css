@@ -32,3 +32,11 @@ form input::placeholder,
 form textarea::placeholder {
   color: #aaa;
 }
+
+footer a {
+  transition: transform 0.3s ease;
+}
+footer a:hover {
+  transform: scale(1.2);
+  color: #ff3366 !important;
+}
