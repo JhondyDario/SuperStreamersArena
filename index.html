@@ -22,7 +22,6 @@
   </button>
 
   <!-- MODAL NOTICIAS -->
-  <div class="modal fade" id="newsModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content bg-dark text-white">
         <div class="modal-header">
@@ -67,12 +66,17 @@
     </div>
   </nav>
 
-  <!-- DESCARGA -->
-  <section id="descargar" class="container py-5 text-center" data-aos="zoom-in">
-    <h2>Descargar el juego</h2>
-    <a href="SuperStreamersArena-PC.zip" class="btn btn-primary m-2">Descargar para PC</a>
-    <a href="SuperStreamersArena.apk" class="btn btn-success m-2">Descargar para Android</a>
-  </section>
+<!-- DESCARGA -->
+<section id="descargar" class="container py-5 text-center" data-aos="zoom-in">
+  <h2>Descargar el juego</h2>
+  <p class="text-muted">Versión actual: <strong>0.0.10</strong> — <span class="badge bg-warning text-dark">Beta Cerrada</span></p>
+  <a href="SuperStreamersArena-PC.zip" class="btn btn-primary m-2">
+    🖥️ Descargar para PC
+  </a>
+  <a href="SuperStreamersArena.apk" class="btn btn-success m-2">
+    📱 Descargar para Android
+  </a>
+</section>
 
   <!-- CARACTERÍSTICAS -->
   <section id="caracteristicas" class="container py-5" data-aos="fade-right">
@@ -131,7 +135,7 @@
     <div class="container">
       <p>&copy; 2025 Super Streamers Arena. Todos los derechos reservados.</p>
       <div class="d-flex justify-content-center gap-3 mt-3">
-        <a href="https://youtube.com/@SuperStreamersArena" class="text-white fs-4" target="_blank">
+        <a href="https://www.youtube.com/c/jhondyjd" class="text-white fs-4" target="_blank">
           <i class="fab fa-youtube"></i>
         </a>
         <a href="https://tiktok.com/@SuperStreamersArena" class="text-white fs-4" target="_blank">
@@ -153,10 +157,6 @@
   <script src="game.js"></script>
   <script>
     AOS.init();
-    window.onload = () => {
-      const modal = new bootstrap.Modal(document.getElementById('newsModal'));
-      modal.show();
-    };
   </script>
 </body>
 </html>
