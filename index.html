@@ -1,162 +1,76 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Super Streamers Arena</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Super Streamers Arena</title>
 
-  <!-- Bootstrap + AOS + Font Awesome -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Super Streamers Arena" />
+<meta property="og:description" content="Un arena multijugador inspirado en streamers: juega solo o con amigos, desbloquea skins y compite en minijuegos." />
+<meta property="og:url" content="https://tu-usuario.github.io/super-streamers-arena/" />
+<meta property="og:image" content="assets/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<link rel="icon" href="assets/favicon.png" />
+<link rel="stylesheet" href="style.css" />
 </head>
-<body data-bs-theme="dark">
-
-  <!-- AUDIO -->
-  <audio id="bg-audio" autoplay loop>
-    <source src="audio.mp3" type="audio/mpeg">
-  </audio>
-  <button id="muteToggle" class="btn btn-sm btn-secondary position-fixed top-0 end-0 m-3 z-3">
-    🔈 Silenciar
-  </button>
-
-  <!-- MODAL NOTICIAS -->
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content bg-dark text-white">
-        <div class="modal-header">
-          <h5 class="modal-title">📰 Novedades del juego</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <p>🎉 Actualización v2.5: nuevos mapas, personajes y habilidades.</p>
-          <p>📢 ¡Síguenos en redes para más sorpresas!</p>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-success" data-bs-dismiss="modal">¡Genial!</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<!-- HERO HEADER -->
-<header class="hero-header d-flex align-items-center justify-content-center text-center text-white">
-  <div class="hero-content" data-aos="fade-up">
-    <h1 class="display-3 fw-bold">Super Streamers Arena</h1>
-    <p class="lead mb-4">¡Domina la batalla en PC y Android con tus streamers favoritos!</p>
-    <a href="#descargar" class="btn btn-lg btn-warning fw-bold shadow">🚀 Empezar Ahora</a>
-  </div>
+<body class="home-page">
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="./">
+<img src="assets/header_logo.png" alt="Super Streamers Arena" class="brand-logo">
+<span class="brand-title">Super Streamers Arena</span>
+</a>
+<button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
+<span></span><span></span><span></span>
+</button>
+<nav id="nav" class="site-nav">
+<ul>
+<li><a href="#about">Home</a></li>
+<li><a href="#download">Download</a></li>
+<li><a href="#changelog">Changelog</a></li>
+<li><a href="#screenshots">Screenshots</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">SSA</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#descargar">Descargar</a></li>
-          <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
-          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-<!-- DESCARGA -->
-<section id="descargar" class="container py-5 text-center" data-aos="zoom-in">
-  <h2>Descargar el juego</h2>
-  <p class="text-muted">Versión actual: <strong>0.0.10</strong> — <span class="badge bg-warning text-dark">Beta Cerrada</span></p>
-  <a href="SuperStreamersArena-PC.zip" class="btn btn-primary m-2">
-    🖥️ Descargar para PC
-  </a>
-  <a href="SuperStreamersArena.apk" class="btn btn-success m-2">
-    📱 Descargar para Android
-  </a>
+<main>
+<section class="hero">
+<div class="wrap hero-inner">
+<div class="hero-left">
+<h1>Super Streamers Arena</h1>
+<p class="tagline">Compite, streamea, desbloquea skins y domina las arenas. Disponible Demo para PC y Android.</p>
+<div class="cta-row">
+<a class="btn primary" href="#download">Descargar Demo</a>
+<a class="btn ghost" href="#trailer">Ver Trailer</a>
+</div>
+</div>
+<div class="hero-right">
+<img src="assets/hero.png" alt="Super Streamers Arena - screenshot" class="hero-image">
+</div>
+</div>
 </section>
 
-  <!-- CARACTERÍSTICAS -->
-  <section id="caracteristicas" class="container py-5" data-aos="fade-right">
-    <h2>Características</h2>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item bg-dark text-white">✅ Batallas en tiempo real</li>
-      <li class="list-group-item bg-dark text-white">✅ Personajes inspirados en streamers reales</li>
-      <li class="list-group-item bg-dark text-white">✅ Compatible con PC y Android</li>
-    </ul>
-  </section>
 
-  <!-- GALERÍA -->
-  <section id="galeria" class="container py-5 text-center" data-aos="fade-up">
-    <h2>Galería</h2>
-    <div id="carouselArena" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="captura1.png" class="d-block w-100 rounded" alt="Captura 1">
-        </div>
-        <div class="carousel-item">
-          <img src="captura2.png" class="d-block w-100 rounded" alt="Captura 2">
-        </div>
-        <div class="carousel-item">
-          <img src="captura3.png" class="d-block w-100 rounded" alt="Captura 3">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselArena" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselArena" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </section>
+<section id="about" class="section wrap">
+<div class="text-box">
+<h2>Acerca del juego</h2>
+<p>Super Streamers Arena es un juego de peleas arena con toques de party games y mecánicas pensadas para partidas rápidas entre amigos. Desbloquea skins, power-ups y personaliza tu streamer para dominar la tabla de líderes.</p>
+<p><strong>Características:</strong> Multiplayer local & online, modos rápidos, personalización de personajes, ranking y eventos especiales.</p>
+</div>
+</section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="container py-5" data-aos="flip-left">
-    <h2>Contacto</h2>
-    <form id="contactForm" class="needs-validation" novalidate>
-      <input type="text" name="_gotcha" style="display:none" />
-      <div class="mb-3">
-        <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required />
-      </div>
-      <div class="mb-3">
-        <input type="email" name="email" class="form-control" placeholder="Tu email" required />
-      </div>
-      <div class="mb-3">
-        <textarea name="mensaje" class="form-control" rows="4" placeholder="Mensaje..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-warning">Enviar</button>
-    </form>
-  </section>
 
-  <!-- FOOTER con redes sociales -->
-  <footer class="bg-dark text-center text-white py-4">
-    <div class="container">
-      <p>&copy; 2025 Super Streamers Arena. Todos los derechos reservados.</p>
-      <div class="d-flex justify-content-center gap-3 mt-3">
-        <a href="https://www.youtube.com/c/jhondyjd" class="text-white fs-4" target="_blank">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://tiktok.com/@SuperStreamersArena" class="text-white fs-4" target="_blank">
-          <i class="fab fa-tiktok"></i>
-        </a>
-        <a href="https://instagram.com/SuperStreamersArena" class="text-white fs-4" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://x.com/StreamersArena" class="text-white fs-4" target="_blank">
-          <i class="fab fa-x-twitter"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="game.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
+<section id="screenshots" class="section wrap">
+<h2>Screenshots</h2>
+<div class="carousel" data-autoplay="true">
+<div class="slides">
+<!-- sustituye estas rutas por tus imágenes en assets/ -->
 </html>
