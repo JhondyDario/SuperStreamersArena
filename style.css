@@ -402,7 +402,7 @@ h2 {
 
 /* Logo principal (centro) */
 .logo-main {
-  width: 220px; /* tamaño equilibrado */
+  width: 340px; /* tamaño equilibrado */
   height: auto;
   z-index: 2;
   animation: float-center 4s ease-in-out infinite;
@@ -410,7 +410,7 @@ h2 {
 
 /* Logos secundarios (lados) */
 .logo-side {
-  width: 140px;
+  width: 220px;
   height: auto;
   opacity: 0.9;
 }
@@ -438,3 +438,4 @@ h2 {
 }
 
 >>>>>>> a9975659e13355afd0127f9963fa5e09776d63a7
+
