@@ -140,54 +140,70 @@ h1 {
 }
 
 /* 🎠 Carousel */
-.carousel {
+/* Forzar tamaño fijo en capturas y video */
+.carousel, .video-wrapper {
+  width: 854px;
+  height: 480px;
+  max-width: 100%;
+  margin: 0 auto;
   position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #061022;
 }
-.slides {
-  display: flex;
-  transition: transform 400ms ease;
-}
-.slide {
-  min-width: 100%;
+
+.carousel img.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: none;
+  border-radius: 8px;
 }
-.slide.active { display: block; }
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.4);
-  border: none;
-  color: var(--white);
-  font-size: 28px;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background 0.3s ease;
+
+.carousel img.slide.active {
+  display: block;
 }
-.carousel-btn:hover { background: rgba(0,0,0,0.7); }
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-.dots {
+
+/* Controles del carrusel abajo */
+.carousel-controls {
   position: absolute;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.carousel-btn {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.carousel-btn:hover {
+  background: var(--accent);
+  color: #111;
+}
+
+.dots {
   display: flex;
   gap: 6px;
 }
+
 .dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255,255,255,0.3);
   cursor: pointer;
 }
-.dot.active { background: var(--accent); }
+
+.dot.active {
+  background: var(--accent);
+}
 
 /* 🎥 Video */
 .video-wrapper {
@@ -230,3 +246,4 @@ h1 {
 @media (max-width: 520px) {
   h1 { font-size: 26px; }
 }
+
