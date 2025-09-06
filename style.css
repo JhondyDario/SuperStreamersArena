@@ -20,10 +20,15 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, .brand-title {
+h1, h2, h3, .brand-title {
   font-family: 'Orbitron', sans-serif;
   letter-spacing: 1px;
   color: var(--white);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--muted);
 }
 
 /* 🚀 Header */
@@ -71,10 +76,6 @@ h1, h2, .brand-title {
   gap: 2rem;
   margin: 0;
   padding: 0;
-}
-
-.site-nav ul li {
-  display: inline-block;
 }
 
 .site-nav ul li a {
@@ -140,8 +141,7 @@ h1 {
 }
 
 /* 🎠 Carousel */
-/* Tamaño fijo para capturas y video */
-.carousel, .video-wrapper {
+.carousel {
   width: 854px;
   height: 480px;
   max-width: 100%;
@@ -150,9 +150,10 @@ h1 {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  background: #061022;
 }
 
-/* Imágenes escaladas con transición */
+/* Imágenes con transición */
 .carousel img.slide {
   width: 100%;
   height: 100%;
@@ -160,7 +161,7 @@ h1 {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .carousel img.slide.active {
@@ -168,7 +169,7 @@ h1 {
   z-index: 1;
 }
 
-/* Controles del carrusel abajo */
+/* Controles del carrusel siempre visibles */
 .carousel-controls {
   position: absolute;
   bottom: 12px;
@@ -180,13 +181,13 @@ h1 {
 }
 
 .carousel-btn {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   border: none;
   color: white;
   font-size: 22px;
   border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -196,16 +197,17 @@ h1 {
   color: #111;
 }
 
+/* Dots más grandes */
 .dots {
   display: flex;
-  gap: 6px;
+  gap: 8px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.4);
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -216,9 +218,13 @@ h1 {
 
 /* 🎥 Video */
 .video-wrapper {
+  width: 854px;
+  height: 480px;
+  max-width: 100%;
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 .video-wrapper iframe {
   position: absolute;
@@ -243,6 +249,7 @@ h1 {
   color: var(--muted);
   text-align: center;
   font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 /* 📱 Responsive */
@@ -255,5 +262,3 @@ h1 {
 @media (max-width: 520px) {
   h1 { font-size: 26px; }
 }
-
-
