@@ -290,48 +290,48 @@ h2 {
   text-align: center;
 }
 
-/* Logos flotantes */
+/* Logos flotantes en línea */
 .logos-section {
-  position: relative;
   width: 100%;
   max-width: 1100px;
-  height: 200px; /* altura de la sección de logos */
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
-.logo-center img {
-  width: 1100px;
+.logo-float-line {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* espacio entre logos */
+  align-items: center;
+}
+
+.logo-float-line img.logo-float {
+  width: 200px; /* ajustable según cómo quieras que se vean en la línea */
   height: auto;
-  display: block;
-  margin: 0 auto;
-  z-index: 10;
+  animation: float 3s ease-in-out infinite alternate;
 }
 
-.logo-float {
-  position: absolute;
-  width: 60px;
-  height: auto;
-  animation: float 4s ease-in-out infinite alternate;
-}
-
-.logo1 { top: 0%; left: 0%; }
-.logo2 { top: 0%; right: 0%; }
-
+/* Animación flotante vertical */
 @keyframes float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(5deg); }
-  100% { transform: translateY(0px) rotate(-5deg); }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
-/* Responsivo */
+/* Responsivo: reduce tamaño de logos en pantallas pequeñas */
 @media (max-width: 1100px) {
-  .about-image, .logo-center img, .logo-float {
-    width: 80%;
-  }
-  .logos-section {
-    height: 150px;
+  .logo-float-line img.logo-float {
+    width: 150px;
   }
 }
+
+@media (max-width: 600px) {
+  .logo-float-line img.logo-float {
+    width: 120px;
+  }
+}
+
 
 
 
