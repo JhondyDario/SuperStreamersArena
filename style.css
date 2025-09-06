@@ -289,23 +289,6 @@ h2 {
 }
 
 /* Logos centrados verticalmente */
-.logos-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* uno encima de otro */
-  gap: 20px; /* espacio entre logos */
-  margin-bottom: 20px;
-}
-
-.logo-float-line {
-  display: flex;
-  flex-direction: column; /* aseguramos vertical */
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
 .logo-float {
   width: 100%;
   max-width: 220px; /* ajusta según prefieras */
@@ -324,12 +307,6 @@ h2 {
 
 .logo-right {
   animation: float-down 4s ease-in-out infinite;
-}
-
-@keyframes float-vertical {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
 }
 
 /* 🌟 Logos flotantes */
@@ -377,3 +354,4 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
