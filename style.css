@@ -290,7 +290,6 @@ h2 {
   text-align: center;
 }
 
-/* Logos flotantes en línea */
 .logos-section {
   width: 100%;
   max-width: 1100px;
@@ -302,36 +301,51 @@ h2 {
 .logo-float-line {
   display: flex;
   justify-content: center;
-  gap: 10px; /* espacio entre logos */
   align-items: center;
+  gap: 20px;
 }
 
-.logo-float-line img.logo-float {
-  width: 200px; /* ajustable según cómo quieras que se vean en la línea */
+.logo-float {
+  width: 220px; /* puedes ajustar tamaño */
   height: auto;
-  animation: float 3s ease-in-out infinite alternate;
 }
 
-/* Animación flotante vertical */
-@keyframes float {
+/* Animaciones independientes para cada logo */
+.logo-left {
+  animation: float-left 3s ease-in-out infinite alternate;
+}
+
+.logo-center {
+  animation: float-center 3.5s ease-in-out infinite alternate;
+}
+
+.logo-right {
+  animation: float-right 4s ease-in-out infinite alternate;
+}
+
+@keyframes float-left {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float-center {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0px); }
 }
 
-/* Responsivo: reduce tamaño de logos en pantallas pequeñas */
+@keyframes float-right {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsivo */
 @media (max-width: 1100px) {
-  .logo-float-line img.logo-float {
-    width: 150px;
-  }
+  .logo-float { width: 180px; }
 }
 
 @media (max-width: 600px) {
-  .logo-float-line img.logo-float {
-    width: 120px;
-  }
+  .logo-float { width: 140px; }
 }
-
-
-
-
