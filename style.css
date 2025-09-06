@@ -102,36 +102,6 @@ h2 {
   color: var(--text-light);
 }
 
-/* 🖼 Hero */
-.hero {
-  padding: 120px 0 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 24px;
-}
-
-.hero-left { flex: 1; min-width: 280px; }
-.hero-right { flex: 1; text-align: right; min-width: 280px; }
-
-.hero-image {
-  max-width: 420px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
-
-.tagline {
-  margin-bottom: 16px;
-  color: var(--text-light);
-}
-
 /* 🎠 Carousel */
 .carousel {
   width: 550px;
@@ -305,3 +275,4 @@ h2 {
     height: 10px;
   }
 }
+
