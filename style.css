@@ -314,10 +314,8 @@ h2 {
   animation: float 4s ease-in-out infinite alternate;
 }
 
-.logo1 { top: 0%; left: 5%; }
-.logo2 { top: 0%; right: 5%; }
-.logo3 { bottom: 0%; left: 10%; }
-.logo4 { bottom: 0%; right: 10%; }
+.logo1 { top: 0%; left: 0%; }
+.logo2 { top: 0%; right: 0%; }
 
 @keyframes float {
   0% { transform: translateY(0px) rotate(0deg); }
@@ -334,3 +332,4 @@ h2 {
     height: 150px;
   }
 }
+
