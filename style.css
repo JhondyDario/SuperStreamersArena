@@ -300,7 +300,7 @@ h2 {
 }
 
 .logo-center img {
-  width: 120px;
+  width: 1100px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -324,7 +324,7 @@ h2 {
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .about-image, .logo-center img, .logo-float {
     width: 80%;
   }
@@ -332,5 +332,6 @@ h2 {
     height: 150px;
   }
 }
+
 
 
