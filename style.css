@@ -321,7 +321,7 @@ h2 {
 
 /* Logo principal (centro) */
 .logo-main {
-  width: 120px;
+  width: 550px;
   height: auto;
   z-index: 2;
   animation: float-center 4s ease-in-out infinite;
@@ -329,7 +329,7 @@ h2 {
 
 /* Logos secundarios (lados) */
 .logo-side {
-  width: 80px;
+  width: 100px;
   height: auto;
 }
 
@@ -354,6 +354,7 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
 
 
 
