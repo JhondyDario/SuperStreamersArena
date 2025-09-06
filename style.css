@@ -276,3 +276,61 @@ h2 {
   }
 }
 
+/* Contenedor principal de About */
+.about-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Texto debajo de la captura */
+.about-text {
+  text-align: center;
+}
+
+/* Logos flotantes */
+.logos-section {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  height: 200px; /* altura de la sección de logos */
+  margin-bottom: 20px;
+}
+
+.logo-center img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.logo-float {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  animation: float 4s ease-in-out infinite alternate;
+}
+
+.logo1 { top: 0%; left: 5%; }
+.logo2 { top: 0%; right: 5%; }
+.logo3 { bottom: 0%; left: 10%; }
+.logo4 { bottom: 0%; right: 10%; }
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(-5deg); }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .about-image, .logo-center img, .logo-float {
+    width: 80%;
+  }
+  .logos-section {
+    height: 150px;
+  }
+}
