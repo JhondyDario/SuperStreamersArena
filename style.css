@@ -288,68 +288,54 @@ h2 {
   padding: 0 10px;  /* pequeño padding lateral */
 }
 
-/* Logos flotantes dinámicos */
+/* Logos centrados verticalmente */
 .logos-section {
-  width: 100%;
-  max-width: 100%;  /* que nunca supere el ancho del contenedor */
-  margin: 0 auto 20px auto;
   display: flex;
   justify-content: center;
-  overflow: hidden; /* corta cualquier exceso */
+  align-items: center;
+  flex-direction: column; /* uno encima de otro */
+  gap: 20px; /* espacio entre logos */
+  margin-bottom: 20px;
 }
 
 .logo-float-line {
   display: flex;
+  flex-direction: column; /* aseguramos vertical */
   justify-content: center;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap; /* para pantallas pequeñas */
 }
 
 .logo-float {
   width: 100%;
-  max-width: 220px; /* tamaño máximo */
+  max-width: 220px; /* ajusta según prefieras */
   height: auto;
 }
 
-/* Animaciones independientes para cada logo */
+/* Animaciones verticales sutiles */
 .logo-left {
-  animation: float-left 3s ease-in-out infinite alternate;
+  animation: float-vertical 3s ease-in-out infinite alternate;
 }
 
 .logo-center {
-  animation: float-center 3.5s ease-in-out infinite alternate;
+  animation: float-vertical 3.5s ease-in-out infinite alternate;
 }
 
 .logo-right {
-  animation: float-right 4s ease-in-out infinite alternate;
+  animation: float-vertical 4s ease-in-out infinite alternate;
 }
 
-@keyframes float-left {
+@keyframes float-vertical {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
 
-@keyframes float-center {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes float-right {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0px); }
-}
-
 /* Responsivo */
 @media (max-width: 1100px) {
-  .logo-float { width: 180px; }
+  .logo-float { max-width: 180px; }
 }
 
 @media (max-width: 600px) {
-  .logo-float { width: 140px; }
+  .logo-float { max-width: 140px; }
 }
-
-
