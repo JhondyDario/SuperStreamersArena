@@ -288,13 +288,6 @@ h2 {
   padding: 0 10px;  /* pequeño padding lateral */
 }
 
-/* Logos centrados verticalmente */
-.logo-float {
-  width: 100%;
-  max-width: 220px; /* ajusta según prefieras */
-  height: auto;
-}
-
 /* Animaciones verticales sutiles */
 .logo-center {
   animation: float-vertical 3.5s ease-in-out infinite alternate;
@@ -311,17 +304,17 @@ h2 {
 
 /* 🌟 Logos flotantes */
 .logos-container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
-  gap: 2rem;
+  gap: 2rem; /* espacio entre los logos */
+  margin: 20px 0 30px; /* separación con el texto */
+  flex-wrap: wrap; /* por si en móviles se desborda */
 }
 
 /* Logo principal (centro) */
 .logo-main {
-  width: 550px;
+  width: 220px; /* tamaño equilibrado */
   height: auto;
   z-index: 2;
   animation: float-center 4s ease-in-out infinite;
@@ -329,8 +322,9 @@ h2 {
 
 /* Logos secundarios (lados) */
 .logo-side {
-  width: 100px;
+  width: 140px;
   height: auto;
+  opacity: 0.9;
 }
 
 /* Animaciones */
@@ -354,7 +348,3 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
-
-
-
-
