@@ -313,16 +313,17 @@ h2 {
 }
 
 /* Animaciones verticales sutiles */
-.logo-left {
-  animation: float-vertical 3s ease-in-out infinite alternate;
-}
-
 .logo-center {
   animation: float-vertical 3.5s ease-in-out infinite alternate;
 }
 
+/* Flotación alternada */
+.logo-left {
+  animation: float-up 4s ease-in-out infinite;
+}
+
 .logo-right {
-  animation: float-vertical 4s ease-in-out infinite alternate;
+  animation: float-down 4s ease-in-out infinite;
 }
 
 @keyframes float-vertical {
@@ -331,11 +332,48 @@ h2 {
   100% { transform: translateY(0px); }
 }
 
-/* Responsivo */
-@media (max-width: 1100px) {
-  .logo-float { max-width: 180px; }
+/* 🌟 Logos flotantes */
+.logos-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 2rem;
 }
 
-@media (max-width: 600px) {
-  .logo-float { max-width: 140px; }
+/* Logo principal (centro) */
+.logo-main {
+  width: 220px;
+  height: auto;
+  z-index: 2;
+  animation: float-center 4s ease-in-out infinite;
+}
+
+/* Logos secundarios (lados) */
+.logo-side {
+  width: 140px;
+  height: auto;
+}
+
+/* Animaciones */
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+}
+
+@keyframes float-center {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .logo-main { width: 160px; }
+  .logo-side { width: 100px; }
 }
