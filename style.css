@@ -184,26 +184,22 @@ h2 {
   transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-controls button.prev {
-  left: 12px;
-}
+.carousel-controls button.prev { left: 12px; }
+.carousel-controls button.next { right: 12px; }
 
-.carousel-controls button.next {
-  right: 12px;
-}
-
-/* ⭕ Dots sobre fondo difuminado */
+/* ⭕ Dots sobre blur */
 .carousel-controls .dots {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   position: absolute;
-  bottom: 12px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 15;
-  padding: 6px 12px;
-  border-radius: 12px;
-  background: rgba(0,0,0,0.4); /* fondo difuminado */
+  padding: 6px 14px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px); /* efecto blur detrás */
 }
 
 .carousel-controls .dots .dot {
@@ -216,7 +212,7 @@ h2 {
 }
 
 .carousel-controls .dots .dot.active {
-  background: #fff;
+  background: var(--accent);
   transform: scale(1.3);
 }
 
@@ -317,4 +313,5 @@ h2 {
     height: 10px;
   }
 }
+
 
