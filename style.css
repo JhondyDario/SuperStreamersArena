@@ -244,12 +244,41 @@ h1 {
 }
 
 /* Footer */
+/* Footer */
 .site-footer {
-  padding: 24px 0;
-  color: var(--muted);
   text-align: center;
+  background: #111;
+  color: #bbb;
+  padding: 30px 15px;
   font-size: 14px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 2px solid #222;
+}
+
+.site-footer p {
+  max-width: 800px;
+  margin: 0 auto 15px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.social-icons a img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
 }
 
 /* 📱 Responsive */
@@ -262,3 +291,4 @@ h1 {
 @media (max-width: 520px) {
   h1 { font-size: 26px; }
 }
+
