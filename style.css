@@ -256,13 +256,6 @@ h2 {
   filter: brightness(1.2);
 }
 
-/* 📱 Responsive */
-@media (max-width: 900px) {
-  .hero-inner { flex-direction: column-reverse; text-align: center; }
-  .hero-right { text-align: center; }
-  .media-container { flex-direction: column; align-items: center; }
-}
-
 @media (max-width: 520px) {
   h1 { font-size: 26px; }
   .carousel-controls button.carousel-btn {
@@ -348,3 +341,4 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
