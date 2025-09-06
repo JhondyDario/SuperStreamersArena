@@ -184,8 +184,13 @@ h2 {
   transform: translateY(-50%) scale(1.1);
 }
 
-.carousel-controls button.prev { left: 12px; }
-.carousel-controls button.next { right: 12px; }
+.carousel-controls button.prev {
+  left: 12px;
+}
+
+.carousel-controls button.next {
+  right: 12px;
+}
 
 /* ⭕ Dots sobre fondo difuminado */
 .carousel-controls .dots {
@@ -198,7 +203,7 @@ h2 {
   z-index: 15;
   padding: 6px 12px;
   border-radius: 12px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.4); /* fondo difuminado */
 }
 
 .carousel-controls .dots .dot {
@@ -213,6 +218,26 @@ h2 {
 .carousel-controls .dots .dot.active {
   background: #fff;
   transform: scale(1.3);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .carousel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .carousel-controls button.carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .carousel-controls .dots .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* 🎥 Video */
@@ -292,3 +317,4 @@ h2 {
     height: 10px;
   }
 }
+
