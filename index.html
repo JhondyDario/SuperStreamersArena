@@ -6,14 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Super Streamers Arena</title>
 
-
 <!-- Open Graph / Twitter -->
 <meta property="og:title" content="Super Streamers Arena" />
 <meta property="og:description" content="Un arena multijugador inspirado en streamers: juega solo o con amigos, desbloquea skins y compite en minijuegos." />
 <meta property="og:url" content="https://jhondydario.github.io/SuperStreamersArena/" />
 <meta property="og:image" content="captura1.png" />
 <meta name="twitter:card" content="summary_large_image" />
-
 
 <link rel="icon" href="assets/favicon.png" />
 <link rel="stylesheet" href="style.css" />
@@ -33,13 +31,13 @@
 <li><a href="#about">Inicio</a></li>
 <li><a href="#download">Descargar</a></li>
 <li><a href="#changelog">Novedades</a></li>
-<li><a href="#screenshots">FAQ</a></li>
+<li><a href="#screenshots">Capturas</a></li>
+<li><a href="#trailer">Trailer</a></li>
 <li><a href="#contact">Contacto</a></li>
 </ul>
 </nav>
 </div>
 </header>
-
 
 <main>
 <section class="hero">
@@ -58,7 +56,6 @@
 </div>
 </section>
 
-
 <section id="about" class="section wrap">
 <div class="text-box">
 <h2>Acerca del juego</h2>
@@ -68,11 +65,21 @@
 </section>
 
 <section id="screenshots" class="section wrap">
-  <h2>Screenshots</h2>
+  <h2>Capturas</h2>
   <div class="carousel" data-autoplay="true">
     <div class="slides">
-    <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura1.png" alt="Screenshot 1">
-    <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura2.png" alt="Screenshot 2">
+      <figure>
+        <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura1.png" alt="Captura 1">
+        <figcaption>Captura 1</figcaption>
+      </figure>
+      <figure>
+        <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura2.png" alt="Captura 2">
+        <figcaption>Captura 2</figcaption>
+      </figure>
+      <figure>
+        <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura3.png" alt="Captura 3">
+        <figcaption>Captura 3</figcaption>
+      </figure>
     </div>
     <button class="carousel-btn prev" aria-label="Anterior">‹</button>
     <button class="carousel-btn next" aria-label="Siguiente">›</button>
@@ -80,4 +87,123 @@
   </div>
 </section>
 
+<section id="trailer" class="section wrap">
+  <h2>Trailer Oficial</h2>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QQ-NQMoJcos" title="Trailer Super Streamers Arena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
+</main>
+
+<script>
+// Carousel con autoplay y navegación
+const slides = document.querySelectorAll('.slides figure');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+const dotsContainer = document.querySelector('.dots');
+let currentIndex = 0;
+
+slides.forEach((_, index) => {
+  const dot = document.createElement('button');
+  dot.classList.add('dot');
+  if(index === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => moveToSlide(index));
+  dotsContainer.appendChild(dot);
+});
+
+function updateCarousel() {
+  slides.forEach((slide, index) => {
+    slide.style.display = index === currentIndex ? 'block' : 'none';
+  });
+  document.querySelectorAll('.dot').forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentIndex);
+  });
+}
+
+function moveToSlide(index) {
+  currentIndex = index;
+  updateCarousel();
+}
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateCarousel();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+});
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateCarousel();
+}, 5000);
+
+updateCarousel();
+</script>
+
+<style>
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+.carousel .slides figure {
+  display: none;
+}
+.carousel .slides figure img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.carousel .slides figure figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #fff;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.dots { margin-top: 10px; }
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.dot.active { background: #fff; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 12px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</body>
 </html>
