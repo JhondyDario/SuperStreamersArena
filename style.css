@@ -277,25 +277,26 @@ h2 {
 }
 
 /* Contenedor principal de About */
+/* Contenedor principal de About */
 .about-box {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  max-width: 100%;  /* evita que se salga del viewport */
+  overflow: hidden; /* evita que los logos flotantes corten la vista */
+  padding: 0 10px;  /* pequeño padding lateral */
 }
 
-/* Texto debajo de la captura */
-.about-text {
-  text-align: center;
-}
-
+/* Logos flotantes dinámicos */
 .logos-section {
   width: 100%;
-  max-width: 1100px;
+  max-width: 100%;  /* que nunca supere el ancho del contenedor */
   margin: 0 auto 20px auto;
-  overflow-x: auto;
-  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; /* corta cualquier exceso */
 }
 
 .logo-float-line {
@@ -303,10 +304,12 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap; /* para pantallas pequeñas */
 }
 
 .logo-float {
-  width: 220px; /* puedes ajustar tamaño */
+  width: 100%;
+  max-width: 220px; /* tamaño máximo */
   height: auto;
 }
 
@@ -349,3 +352,4 @@ h2 {
 @media (max-width: 600px) {
   .logo-float { width: 140px; }
 }
+
