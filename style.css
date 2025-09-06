@@ -67,6 +67,34 @@ h2 {
   align-items: center;
 }
 
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.site-nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.site-nav ul li a:hover {
+  color: var(--accent);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -254,3 +282,4 @@ h2 {
 @media (max-width: 520px) {
   h1 { font-size: 26px; }
 }
+
