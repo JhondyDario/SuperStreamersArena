@@ -31,8 +31,7 @@
 <li><a href="#about">Inicio</a></li>
 <li><a href="#download">Descargar</a></li>
 <li><a href="#changelog">Novedades</a></li>
-<li><a href="#screenshots">Capturas</a></li>
-<li><a href="#trailer">Trailer</a></li>
+<li><a href="#media">Media</a></li>
 <li><a href="#contact">Contacto</a></li>
 </ul>
 </nav>
@@ -47,7 +46,7 @@
 <p class="tagline">Compite, streamea, desbloquea skins y domina las arenas. Disponible Demo para PC y Android.</p>
 <div class="cta-row">
 <a class="btn primary" href="#download">Descargar beta</a>
-<a class="btn ghost" href="#trailer">Ver Trailer</a>
+<a class="btn ghost" href="#media">Ver Trailer</a>
 </div>
 </div>
 <div class="hero-right">
@@ -64,44 +63,51 @@
 </div>
 </section>
 
-<section id="screenshots" class="section wrap">
-  <h2>Capturas</h2>
-  <div class="carousel" data-autoplay="true">
-    <div class="slides">
-      <figure>
-        <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura1.png" alt="Captura 1">
-        <figcaption>Captura 1</figcaption>
-      </figure>
-      <figure>
-        <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura2.png" alt="Captura 2">
-        <figcaption>Captura 2</figcaption>
-      </figure>
-      <figure>
-        <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura3.png" alt="Captura 3">
-        <figcaption>Captura 3</figcaption>
-      </figure>
+<section id="media" class="section wrap media-section">
+  <div class="media-grid">
+    <!-- Carrusel de capturas -->
+    <div class="carousel">
+      <h2>Capturas</h2>
+      <div class="slides">
+        <figure>
+          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura1.png" alt="Captura 1">
+          <figcaption>Captura 1</figcaption>
+        </figure>
+        <figure>
+          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura2.png" alt="Captura 2">
+          <figcaption>Captura 2</figcaption>
+        </figure>
+        <figure>
+          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura3.png" alt="Captura 3">
+          <figcaption>Captura 3</figcaption>
+        </figure>
+      </div>
+      <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+      <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+      <div class="dots"></div>
     </div>
-    <button class="carousel-btn prev" aria-label="Anterior">‹</button>
-    <button class="carousel-btn next" aria-label="Siguiente">›</button>
-    <div class="dots"></div>
-  </div>
-</section>
 
-<section id="trailer" class="section wrap">
-  <h2>Trailer Oficial</h2>
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/QQ-NQMoJcos" title="Trailer Super Streamers Arena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Trailer -->
+    <div class="video-container">
+      <h2>Trailer Oficial</h2>
+      <iframe src="https://www.youtube.com/embed/QQ-NQMoJcos" title="Trailer Super Streamers Arena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
   </div>
 </section>
 </main>
 
+<footer class="footer">
+  <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldados por ninguna figura pública. Todos los recursos relacionados fueron generados con inteligencia artificial. El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos.</p>
+</footer>
+
 <script>
-// Carousel con autoplay y navegación
+// Carousel con autoplay y flechas
 const slides = document.querySelectorAll('.slides figure');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 const nextBtn = document.querySelector('.carousel-btn.next');
 const dotsContainer = document.querySelector('.dots');
 let currentIndex = 0;
+let autoPlay;
 
 slides.forEach((_, index) => {
   const dot = document.createElement('button');
@@ -123,31 +129,47 @@ function updateCarousel() {
 function moveToSlide(index) {
   currentIndex = index;
   updateCarousel();
+  resetAutoPlay();
 }
 
 prevBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
   updateCarousel();
+  resetAutoPlay();
 });
 
 nextBtn.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % slides.length;
   updateCarousel();
+  resetAutoPlay();
 });
 
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
-}, 5000);
+function startAutoPlay() {
+  autoPlay = setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  }, 5000);
+}
+
+function resetAutoPlay() {
+  clearInterval(autoPlay);
+  startAutoPlay();
+}
 
 updateCarousel();
+startAutoPlay();
 </script>
 
 <style>
+/* Layout de media (capturas izquierda, video derecha) */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
 .carousel {
   position: relative;
-  max-width: 800px;
-  margin: auto;
   text-align: center;
 }
 .carousel .slides figure {
@@ -156,6 +178,7 @@ updateCarousel();
 .carousel .slides figure img {
   max-width: 100%;
   border-radius: 10px;
+  border: 3px solid #fff;
 }
 .carousel .slides figure figcaption {
   margin-top: 8px;
@@ -166,16 +189,20 @@ updateCarousel();
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   border: none;
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 10px 20px;
   border-radius: 50%;
+  transition: background 0.3s;
 }
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+.carousel-btn.prev { left: -40px; }
+.carousel-btn.next { right: -40px; }
 .dots { margin-top: 10px; }
 .dot {
   height: 12px;
@@ -188,6 +215,7 @@ updateCarousel();
 }
 .dot.active { background: #fff; }
 
+/* Video */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -203,6 +231,16 @@ updateCarousel();
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Footer */
+.footer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #111;
+  color: #ddd;
+  font-size: 14px;
+  text-align: center;
 }
 </style>
 </body>
