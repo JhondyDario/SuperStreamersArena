@@ -277,7 +277,6 @@ h2 {
 }
 
 /* Contenedor principal de About */
-/* Contenedor principal de About */
 .about-box {
   position: relative;
   display: flex;
@@ -352,4 +351,5 @@ h2 {
 @media (max-width: 600px) {
   .logo-float { width: 140px; }
 }
+
 
