@@ -17,231 +17,140 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body class="home-page">
+
 <header class="site-header">
-<div class="wrap">
-<a class="brand" href="./">
-<img src="assets/header_logo.png" alt="Super Streamers Arena" class="brand-logo">
-<span class="brand-title">Super Streamers Arena</span>
-</a>
-<button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú">
-<span></span><span></span><span></span>
-</button>
-<nav id="nav" class="site-nav">
-<ul>
-<li><a href="#about">Inicio</a></li>
-<li><a href="#download">Descargar</a></li>
-<li><a href="#changelog">Novedades</a></li>
-<li><a href="#media">Media</a></li>
-<li><a href="#contact">Contacto</a></li>
-</ul>
-</nav>
-</div>
+  <div class="wrap header-inner">
+    <a class="brand" href="./">
+      <img src="assets/header_logo.png" alt="Super Streamers Arena" class="brand-logo">
+      <span class="brand-title">Super Streamers Arena</span>
+    </a>
+    <nav id="nav" class="site-nav">
+      <ul>
+        <li><a href="#about">Inicio</a></li>
+        <li><a href="#download">Descargar</a></li>
+        <li><a href="#changelog">Novedades</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
-<section class="hero">
-<div class="wrap hero-inner">
-<div class="hero-left">
-<h1>Super Streamers Arena</h1>
-<p class="tagline">Compite, streamea, desbloquea skins y domina las arenas. Disponible Demo para PC y Android.</p>
-<div class="cta-row">
-<a class="btn primary" href="#download">Descargar beta</a>
-<a class="btn ghost" href="#media">Ver Trailer</a>
-</div>
-</div>
-<div class="hero-right">
-<img src="assets/hero.png" alt="Super Streamers Arena - screenshot" class="hero-image">
-</div>
-</div>
-</section>
-
-<section id="about" class="section wrap">
-<div class="text-box">
-<h2>Acerca del juego</h2>
-<p>Super Streamers Arena es un juego de peleas arena con toques de party games y mecánicas pensadas para partidas rápidas entre amigos. Desbloquea skins, power-ups y personaliza tu streamer para dominar la tabla de líderes.</p>
-<p><strong>Características:</strong> Multiplayer local & online, modos rápidos, personalización de personajes, ranking y eventos especiales.</p>
-</div>
-</section>
-
-<section id="media" class="section wrap media-section">
-  <div class="media-grid">
-    <!-- Carrusel de capturas -->
-    <div class="carousel">
-      <h2>Capturas</h2>
-      <div class="slides">
-        <figure>
-          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura1.png" alt="Captura 1">
-          <figcaption>Captura 1</figcaption>
-        </figure>
-        <figure>
-          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura2.png" alt="Captura 2">
-          <figcaption>Captura 2</figcaption>
-        </figure>
-        <figure>
-          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura3.png" alt="Captura 3">
-          <figcaption>Captura 3</figcaption>
-        </figure>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-left">
+        <h1>Super Streamers Arena</h1>
+        <p class="tagline">Compite, streamea, desbloquea skins y domina las arenas. Disponible Demo para PC y Android.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#download">Descargar beta</a>
+          <a class="btn ghost" href="#trailer">Ver Trailer</a>
+        </div>
       </div>
-      <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
-      <button class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
-      <div class="dots"></div>
+      <div class="hero-right">
+        <img src="assets/hero.png" alt="Super Streamers Arena - screenshot" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section wrap">
+    <div class="text-box">
+      <h2>Acerca del juego</h2>
+      <p>Super Streamers Arena es un juego de peleas arena con toques de party games y mecánicas pensadas para partidas rápidas entre amigos. Desbloquea skins, power-ups y personaliza tu streamer para dominar la tabla de líderes.</p>
+      <p><strong>Características:</strong> Multiplayer local & online, modos rápidos, personalización de personajes, ranking y eventos especiales.</p>
+    </div>
+  </section>
+
+  <!-- Media section -->
+  <section id="media" class="section wrap media-section">
+    <div class="media-left">
+      <h2>Capturas</h2>
+      <div class="carousel" data-autoplay="true">
+        <div class="slides">
+          <img class="slide active" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura1.png" alt="Captura 1">
+          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura2.png" alt="Captura 2">
+          <img class="slide" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/captura3.png" alt="Captura 3">
+        </div>
+        <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+        <button class="carousel-btn next" aria-label="Siguiente">›</button>
+        <div class="dots"></div>
+      </div>
     </div>
 
-    <!-- Trailer -->
-    <div class="video-container">
-      <h2>Trailer Oficial</h2>
-      <iframe src="https://www.youtube.com/embed/QQ-NQMoJcos" title="Trailer Super Streamers Arena" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="media-right">
+      <h2>Video destacado</h2>
+      <div class="video-wrapper">
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/QQ-NQMoJcos"
+          title="Video destacado"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </main>
 
-<footer class="footer">
-  <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldados por ninguna figura pública. Todos los recursos relacionados fueron generados con inteligencia artificial. El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos.</p>
+<footer class="site-footer">
+  <p>El equipo Super Streamers Arena no está afiliado ni respaldados por ninguna figura pública. 
+  Todos los recursos relacionados fueron generados con inteligencia artificial. 
+  El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos.</p>
 </footer>
 
 <script>
-// Carousel con autoplay y flechas
-const slides = document.querySelectorAll('.slides figure');
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const nextBtn = document.querySelector('.carousel-btn.next');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 const dotsContainer = document.querySelector('.dots');
 let currentIndex = 0;
-let autoPlay;
+let autoPlayInterval;
 
+// Crear dots
 slides.forEach((_, index) => {
-  const dot = document.createElement('button');
+  const dot = document.createElement('span');
   dot.classList.add('dot');
   if(index === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => moveToSlide(index));
+  dot.addEventListener('click', () => goToSlide(index));
   dotsContainer.appendChild(dot);
 });
 
-function updateCarousel() {
-  slides.forEach((slide, index) => {
-    slide.style.display = index === currentIndex ? 'block' : 'none';
-  });
-  document.querySelectorAll('.dot').forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentIndex);
-  });
-}
+const dots = document.querySelectorAll('.dot');
 
-function moveToSlide(index) {
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+    dots[i].classList.toggle('active', i === index);
+  });
   currentIndex = index;
-  updateCarousel();
-  resetAutoPlay();
 }
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateCarousel();
-  resetAutoPlay();
-});
+function nextSlide() {
+  let next = (currentIndex + 1) % slides.length;
+  showSlide(next);
+}
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateCarousel();
-  resetAutoPlay();
-});
+function prevSlide() {
+  let prev = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(prev);
+}
+
+function goToSlide(index) {
+  showSlide(index);
+}
 
 function startAutoPlay() {
-  autoPlay = setInterval(() => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  }, 5000);
+  autoPlayInterval = setInterval(nextSlide, 4000);
 }
 
-function resetAutoPlay() {
-  clearInterval(autoPlay);
-  startAutoPlay();
+function stopAutoPlay() {
+  clearInterval(autoPlayInterval);
 }
 
-updateCarousel();
+nextBtn.addEventListener('click', () => { nextSlide(); stopAutoPlay(); startAutoPlay(); });
+prevBtn.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
+
 startAutoPlay();
 </script>
 
-<style>
-/* Layout de media (capturas izquierda, video derecha) */
-.media-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-.carousel {
-  position: relative;
-  text-align: center;
-}
-.carousel .slides figure {
-  display: none;
-}
-.carousel .slides figure img {
-  max-width: 100%;
-  border-radius: 10px;
-  border: 3px solid #fff;
-}
-.carousel .slides figure figcaption {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #fff;
-}
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  border: none;
-  color: white;
-  font-size: 3rem;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 50%;
-  transition: background 0.3s;
-}
-.carousel-btn:hover {
-  background: rgba(0,0,0,0.8);
-}
-.carousel-btn.prev { left: -40px; }
-.carousel-btn.next { right: -40px; }
-.dots { margin-top: 10px; }
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-}
-.dot.active { background: #fff; }
-
-/* Video */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-  border-radius: 12px;
-}
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Footer */
-.footer {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  background: #111;
-  color: #ddd;
-  font-size: 14px;
-  text-align: center;
-}
-</style>
 </body>
 </html>
