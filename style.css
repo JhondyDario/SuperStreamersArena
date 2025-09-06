@@ -294,7 +294,7 @@ h2 {
 .logos-section {
   position: relative;
   width: 100%;
-  max-width: 550px;
+  max-width: 1100px;
   height: 200px; /* altura de la sección de logos */
   margin-bottom: 20px;
 }
@@ -332,4 +332,5 @@ h2 {
     height: 150px;
   }
 }
+
 
