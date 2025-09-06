@@ -263,7 +263,6 @@ h2 {
                 filter: brightness(1.2);
             }
 
-<<<<<<< HEAD
 /* 📱 Responsive */
 @media (max-width: 900px) {
     .hero-inner {
@@ -281,8 +280,6 @@ h2 {
     }
 }
 
-=======
->>>>>>> a9975659e13355afd0127f9963fa5e09776d63a7
 @media (max-width: 520px) {
     h1 {
         font-size: 26px;
@@ -312,7 +309,6 @@ h2 {
     padding: 0 10px; /* pequeño padding lateral */
 }
 
-<<<<<<< HEAD
 /* Logos centrados verticalmente */
 .logos-section {
     display: flex;
@@ -342,9 +338,7 @@ h2 {
     animation: float-vertical 3s ease-in-out infinite alternate;
 }
 
-=======
 /* Animaciones verticales sutiles */
->>>>>>> a9975659e13355afd0127f9963fa5e09776d63a7
 .logo-center {
     animation: float-vertical 3.5s ease-in-out infinite alternate;
 }
@@ -380,7 +374,7 @@ h2 {
         max-width: 140px;
     }
 }
-=======
+
 /* Flotación alternada */
 .logo-left {
   animation: float-up 4s ease-in-out infinite;
@@ -415,6 +409,10 @@ h2 {
   opacity: 0.9;
 }
 
+.espaciado {
+  margin-top: 2rem;
+}
+
 /* Animaciones */
 @keyframes float-up {
   0%, 100% { transform: translateY(0); }
@@ -436,8 +434,3 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
-
->>>>>>> a9975659e13355afd0127f9963fa5e09776d63a7
-
-
-
