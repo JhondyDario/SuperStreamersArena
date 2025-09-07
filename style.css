@@ -22,6 +22,7 @@ body {
     background: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
+    padding-top: 80px; /* 🔥 espacio debajo del header */
 }
 
 /* 🔹 Headers */
@@ -61,7 +62,7 @@ h2 {
 .header-inner {
     max-width: 1200px;
     margin: auto;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -434,6 +435,7 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
 
 
 
