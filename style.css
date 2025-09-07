@@ -130,12 +130,12 @@ h2 {
 .section.wrap,
 .about-box,
 .media-section {
-  background: rgba(0, 0, 0, 0.55);
+  background: transparent; /* 🔥 ya no mete otro cuadro encima */
   border-radius: 16px;
   padding: 30px;
   margin-bottom: 40px;
   backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  box-shadow: none;
 }
 
 .text-box {
@@ -594,3 +594,4 @@ h2 {
   color: #60a5fa;
   text-decoration: underline;
 }
+
