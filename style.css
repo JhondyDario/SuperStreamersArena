@@ -18,6 +18,7 @@
 }
 
 body {
+    padding-top: 120px; /* igual a la altura de tu header */
     font-family: 'Poppins', sans-serif;
     background: var(--bg-dark);
     color: var(--text-light);
@@ -386,6 +387,7 @@ h2 {
 
 /* 🌟 Logos flotantes */
 .logos-container {
+  margin-top: 140px; /* prueba con 120px, 140px o lo que encaje bien */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -434,3 +436,4 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
