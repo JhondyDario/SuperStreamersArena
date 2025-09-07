@@ -94,7 +94,7 @@ h2 {
 }
 
 .brand-logo {
-    height: 100px;
+    height: 40px;
 }
 
 .brand-title {
@@ -386,7 +386,6 @@ h2 {
 
 /* 🌟 Logos flotantes */
 .logos-container {
-  margin-top: 140px; /* prueba con 120px, 140px o lo que encaje bien */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,5 +434,6 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
 
 
