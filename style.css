@@ -127,7 +127,7 @@ h2 {
 }
 
 /* 🌌 Fondos semitranslúcidos pro */
-/*.section.wrap,
+.section.wrap,
 .about-box,
 .media-section {
   background: rgba(0, 0, 0, 0.55);
@@ -136,13 +136,13 @@ h2 {
   margin-bottom: 40px;
   backdrop-filter: blur(6px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-}*/
+}
 
 /* Ajustes del texto dentro */
-/*.about-text p,
+.about-text p,
 .media-container h2 {
   color: var(--text-light);
-}*/
+}
 
 /* 🎠 Carousel */
 .carousel {
@@ -559,6 +559,3 @@ h2 {
     padding: 20px;
     border-radius: 16px;
 }
-
-
-
