@@ -501,9 +501,10 @@ h2 {
 
 
 /* 📱 Responsive */
+/* 📱 Responsive */
 @media (max-width: 900px) {
   .logo-main {
-    width: 200px; /* más pequeño que antes */
+    width: 200px;
   }
 
   .logo-side {
@@ -513,10 +514,10 @@ h2 {
 
 @media (max-width: 600px) {
   .logo-main {
-    width: 120px; /* bien reducido para que quepa en una fila */
+    width: 140px; /* un poquito más grande ya que será el único */
   }
 
   .logo-side {
-    width: 80px;
+    display: none; /* ocultar logos laterales en móvil */
   }
 }
