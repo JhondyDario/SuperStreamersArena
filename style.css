@@ -558,5 +558,45 @@ h2 {
   text-decoration: underline;
 }
 
+/* 📩 Contacto */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* da aire vertical */
+}
+
+.contact-section .text-box {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  margin: 10px 0;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.contact-section .social-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-section .social-link:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
 
 
