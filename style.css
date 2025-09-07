@@ -132,7 +132,7 @@ h2 {
 .media-section {
   background: rgba(0, 0, 0, 0.55); /* negro con opacidad ~55% */
   border-radius: 16px;
-  padding: 0px;
+  padding: 30px;
   margin-bottom: 40px;
   backdrop-filter: blur(6px); 
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
@@ -539,4 +539,5 @@ h2 {
     display: none; /* ocultar logos laterales en móvil */
   }
 }
+
 
