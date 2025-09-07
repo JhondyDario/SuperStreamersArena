@@ -540,5 +540,22 @@ h2 {
   }
 }
 
+/* Estilo exclusivo para la sección Media */
+#media {
+    padding: 50px 20px;          /* Más espacio interno */
+    background: rgba(20, 25, 45, 0.75); /* Fondo distinto al about */
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
 
+#media h2 {
+    color: var(--accent);        /* Encabezados en color principal */
+    margin-bottom: 16px;
+}
 
+#media .media-left, 
+#media .media-right {
+    background: rgba(0,0,0,0.25); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 16px;
+}
