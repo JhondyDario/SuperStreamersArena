@@ -21,8 +21,8 @@ body {
     font-family: 'Poppins', sans-serif;
     background: var(--bg-dark);
     color: var(--text-light);
-    line-height: 1.1;
-    padding-top: 40px; /* 🔥 espacio debajo del header */
+    line-height: 1.6;
+    padding-top: 80px; /* 🔥 espacio debajo del header */
 }
 
 /* 🔹 Headers */
@@ -435,6 +435,7 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
 
 
 
