@@ -22,7 +22,7 @@ body {
     background: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
-    padding-top: 80px; /* 🔥 espacio debajo del header */
+    padding-top: 60px; /* 🔥 espacio debajo del header */
 }
 
 /* 🔹 Headers */
@@ -50,7 +50,7 @@ h2 {
 /* 🚀 Header */
 .site-header {
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     background: var(--bg-alt);
@@ -435,7 +435,4 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
-
-
-
 
