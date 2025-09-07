@@ -614,7 +614,7 @@ h2 {
 /* Cajas internas */
 .donate-box, .text-box {
     flex: 1 1 48%; /* ancho aproximado 50% con margen */
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(255,255,255,0.02);
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.4);
@@ -647,3 +647,4 @@ h2 {
         margin-bottom: 20px;
     }
 }
+
