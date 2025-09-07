@@ -567,14 +567,10 @@ h2 {
 }
 
 .contact-section .text-box {
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 16px;
+  background: transparent; /* 🔥 ya no mete otro cuadro encima */
+  box-shadow: none;
   padding: 40px 30px;
-  max-width: 650px;
-  width: 100%;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  backdrop-filter: blur(6px);
 }
 
 .contact-section h2 {
@@ -598,5 +594,3 @@ h2 {
   color: #60a5fa;
   text-decoration: underline;
 }
-
-
