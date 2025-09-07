@@ -568,10 +568,11 @@ h2 {
 
 .contact-section .text-box {
   background: rgba(0, 0, 0, 0.55);
-  border-radius: 16px;
+  border-radius: 6px;
   padding: 40px 30px;
-  max-width: 650px;
-  width: 100%;
+  text-align: left;   /* 🔥 Alinea el texto como en About */
+  max-width: 800px;   /* para que no se extienda demasiado */
+  margin: 0 auto;     /* centrado el bloque, pero texto a la izquierda */
   text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
   backdrop-filter: blur(6px);
@@ -598,3 +599,4 @@ h2 {
   color: #60a5fa;
   text-decoration: underline;
 }
+
