@@ -90,6 +90,7 @@ h2 {
 .brand {
     display: flex;
     align-items: center;
+    justify-content: center; /* centra horizontalmente */
     gap: 0.6rem;
     text-decoration: none;
 }
@@ -435,6 +436,7 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
 
 
 
