@@ -130,12 +130,18 @@ h2 {
 .section.wrap,
 .about-box,
 .media-section {
-  background: rgba(0, 0, 0, 0.55); /* negro con opacidad ~55% */
+  background: rgba(0, 0, 0, 0.55);
   border-radius: 16px;
   padding: 30px;
   margin-bottom: 40px;
-  backdrop-filter: blur(6px); 
+  backdrop-filter: blur(6px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.text-box {
+    background: rgba(255,255,255,0.02);
+    padding: 18px;
+    border-radius: 12px;
 }
 
 /* Ajustes del texto dentro */
@@ -539,5 +545,7 @@ h2 {
     display: none; /* ocultar logos laterales en móvil */
   }
 }
+
+
 
 
