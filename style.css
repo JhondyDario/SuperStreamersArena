@@ -18,7 +18,6 @@
 }
 
 body {
-    padding-top: 120px; /* igual a la altura de tu header */
     font-family: 'Poppins', sans-serif;
     background: var(--bg-dark);
     color: var(--text-light);
@@ -436,4 +435,5 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
 
