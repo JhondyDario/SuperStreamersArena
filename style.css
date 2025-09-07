@@ -133,9 +133,8 @@ h2 {
   background: rgba(0, 0, 0, 0.55); /* negro con opacidad ~55% */
   border-radius: 16px;
   padding: 30px;
-  margin-bottom: 140px;
+  margin-bottom: 40px;
   backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
 /* Ajustes del texto dentro */
@@ -539,8 +538,3 @@ h2 {
     display: none; /* ocultar logos laterales en móvil */
   }
 }
-
-
-
-
-
