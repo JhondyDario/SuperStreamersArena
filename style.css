@@ -17,20 +17,25 @@
     padding: 0;
 }
 
+/* 🎨 Fondo principal */
 body {
   font-family: 'Poppins', sans-serif;
-  background: url('https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/fondo0.png') no-repeat center center fixed;
-  background-size: cover;
-  color: var(--text-light);
-  line-height: 1.6;
-  padding-top: 80px; /* 🔥 espacio debajo del header */
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a; /* color de respaldo */
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
+/* 🌌 Fondo desenfocado detrás */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/fondo0.png') no-repeat center center fixed;
+  background: url('https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/fondo0.png') 
+              no-repeat center center fixed;
   background-size: cover;
   filter: blur(12px) brightness(0.6);
   z-index: -1;
@@ -447,3 +452,4 @@ h2 {
   .logo-main { width: 160px; }
   .logo-side { width: 100px; }
 }
+
