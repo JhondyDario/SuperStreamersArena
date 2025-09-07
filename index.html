@@ -7,7 +7,530 @@
 
 <link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/icono0.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* 🎨 Tipografía global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap');
+
+:root {
+    --bg-dark: #0f172a;
+    --bg-alt: rgba(15, 23, 42, 0.95);
+    --accent: #3b82f6;
+    --text-light: #e2e8f0;
+    --text-muted: #94a3b8;
+    --contact-bg: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para contacto */
+}
+
+/* 🔹 Reset y body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 🌌 Fondo */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/fondo0.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(12px) brightness(0.6);
+  z-index: -1;
+}
+
+/* 🔹 Headers */
+h1, h2, h3, .brand-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+h2 {
+  border-left: 4px solid #3b82f6;
+  padding-left: 8px;
+  margin-bottom: 12px;
+}
+
+/* 🔹 Layout */
+.container, .wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 🚀 Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.55); /* negro con opacidad pro */
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 600;
+  transition: color .3s;
+}
+
+.site-nav a:hover {
+  color: #3b82f6;
+}
+
+.site-nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.site-nav ul li a:hover {
+    color: var(--accent);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 40px;
+}
+
+.brand-title {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+/* 🌌 Fondos semitranslúcidos pro - MÁS OSCUROS COMO CONTACTO */
+.section.wrap,
+.about-box,
+.media-section {
+  background: rgba(15, 23, 42, 0.7); /* Fondo más oscuro como contacto */
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+.text-box {
+    background: rgba(255,255,255,0.02);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+/* Ajustes del texto dentro */
+.about-text p,
+.media-container h2 {
+  color: var(--text-light);
+}
+
+/* 🎠 Carousel */
+.carousel {
+    width: 550px;
+    height: 315px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    background: #061022;
+}
+
+.carousel img.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.carousel img.slide.active {
+    opacity: 1;
+}
+
+/* ⬅️➡️ Flechas del Carousel */
+.carousel-controls button.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.carousel-controls button.carousel-btn:hover {
+    background: rgba(0,0,0,0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-controls button.prev {
+    left: 12px;
+}
+
+.carousel-controls button.next {
+    right: 12px;
+}
+
+/* ⭕ Dots sobre blur */
+.carousel-controls .dots {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    padding: 6px 14px;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+}
+
+.carousel-controls .dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-controls .dots .dot.active {
+    background: var(--accent);
+    transform: scale(1.3);
+}
+
+/* 🎥 Video */
+.video-wrapper {
+    width: 550px;
+    height: 315px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 🗂 Secciones */
+.section {
+    padding: 40px 0;
+}
+
+.text-box {
+    background: rgba(255,255,255,0.02);
+    padding: 18px;
+    border-radius: 12px;
+}
+
+/* Media horizontal: capturas a la izquierda, video a la derecha */
+.media-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.media-left, .media-right {
+    flex: 1 1 550px;
+    max-width: 550px;
+}
+
+/* 📌 Footer */
+.site-footer {
+  text-align: center;
+  padding: 30px 15px;
+  background: rgba(0, 0, 0, 0.55); /* negro con opacidad pro */
+  color: #94a3b8;
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform .3s, filter .3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.carousel, .video-wrapper {
+  width: 100%;
+  max-width: 550px;
+  height: 315px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  background: #061022;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.site-footer .social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.site-footer .social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .site-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brand-title {
+    font-size: 1.1rem;
+  }
+
+  .logo-main {
+    width: 220px;
+  }
+
+  .logo-side {
+    width: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+
+  .carousel, .video-wrapper {
+    height: 200px;
+  }
+
+  .logo-main {
+    width: 160px;
+  }
+
+  .logo-side {
+    width: 100px;
+  }
+
+  .site-nav ul {
+    gap: 0.8rem;
+  }
+
+  .site-nav a {
+    font-size: 14px;
+  }
+}
+
+.carousel-controls button.carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+}
+
+.carousel-controls .dots .dot {
+    width: 10px;
+    height: 10px;
+}
+
+/* Contenedor principal de About */
+.about-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%; /* evita que se salga del viewport */
+    overflow: hidden; /* evita que los logos flotantes corten la vista */
+    padding: 0 10px; /* pequeño padding lateral */
+}
+
+/* Logos centrados verticalmente */
+.logos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.logo-main {
+  width: 320px;
+  max-width: 80%;
+  animation: float-center 4s ease-in-out infinite;
+}
+
+.logo-side {
+  width: 200px;
+  max-width: 40%;
+  opacity: .9;
+  animation: float-up 4s ease-in-out infinite;
+}
+
+.espaciado {
+  margin-top: 2rem;
+}
+
+/* Animaciones */
+@keyframes float-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-center {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes float-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .logo-main {
+    width: 200px;
+  }
+
+  .logo-side {
+    width: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-main {
+    width: 140px; /* un poquito más grande ya que será el único */
+  }
+
+  .logo-side {
+    display: none; /* ocultar logos laterales en móvil */
+  }
+}
+
+.social-link {
+  color: var(--accent); /* azul destacado */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #60a5fa; /* azul más claro al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* 📩 Estilo para texto en secciones */
+.about-text p, .media-container p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: left; /* Texto alineado a la izquierda */
+}
+
+.about-text h2, .media-container h2 {
+  color: #e2e8f0;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: left; /* Títulos alineados a la izquierda */
+}
+
+/* Ajustes para el carrusel y video */
+.media-left, .media-right {
+  text-align: center; /* Solo el contenido multimedia centrado */
+}
+
+.media-left h2, .media-right h2 {
+  text-align: left; /* Pero los títulos alineados a la izquierda */
+}
+
+/* Responsive: móvil */
+@media (max-width: 768px) {
+  .section.wrap, .about-box, .media-section {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .about-text h2, .media-container h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
 </head>
 <body class="home-page">
 
