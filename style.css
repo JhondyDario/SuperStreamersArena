@@ -600,3 +600,50 @@ h2 {
   text-decoration: underline;
 }
 
+/* Contenedor de donaciones y contactos */
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cajas internas */
+.donate-box, .text-box {
+    flex: 1 1 48%; /* ancho aproximado 50% con margen */
+    background: rgba(0, 0, 0, 0.55);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* Botón PayPal */
+.paypal-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #fff;
+    background: #003087; /* azul PayPal */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.paypal-btn:hover {
+    background: #0050c8;
+    transform: scale(1.05);
+}
+
+/* Responsive: móvil */
+@media (max-width: 768px) {
+    .donate-box, .text-box {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
