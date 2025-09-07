@@ -8,11 +8,9 @@ nav.classList.toggle('open');
 document.body.classList.toggle('nav-open');
 });
 
-
 // simple carousel
 const carousels = document.querySelectorAll('.carousel');
 carousels.forEach(initCarousel);
-
 
 function initCarousel(root){
 const slidesWrap = root.querySelector('.slides');
@@ -21,7 +19,6 @@ const prev = root.querySelector('.prev');
 const next = root.querySelector('.next');
 const dotsWrap = root.querySelector('.dots');
 if(!slides.length) return;
-
 
 let idx = 0;
 // build dots
@@ -32,26 +29,21 @@ dotsWrap.appendChild(b);
 });
 const dots = Array.from(dotsWrap.children);
 
-
 function update(){
 slidesWrap.style.transform = `translateX(-${idx*100}%)`;
 dots.forEach((d,i)=>d.classList.toggle('active', i===idx));
 }
 
-
 function go(i){ idx = (i+slides.length) % slides.length; update(); }
 prev && prev.addEventListener('click', ()=> go(idx-1));
 next && next.addEventListener('click', ()=> go(idx+1));
-
 
 // autoplay
 if(root.dataset.autoplay === 'true'){
 setInterval(()=>{ go(idx+1); }, 4500);
 }
 
-
 update();
 }
-
 
 });
