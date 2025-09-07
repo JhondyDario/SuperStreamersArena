@@ -139,10 +139,10 @@ h2 {
 }*/
 
 /* Ajustes del texto dentro */
-/*.about-text p,
+.about-text p,
 .media-container h2 {
   color: var(--text-light);
-}*/
+}
 
 /* 🎠 Carousel */
 .carousel {
@@ -559,4 +559,5 @@ h2 {
     padding: 20px;
     border-radius: 16px;
 }
+
 
