@@ -66,7 +66,7 @@ h2 {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(0, 0, 0, 0.55); /* negro con opacidad pro */
   backdrop-filter: blur(6px);
   z-index: 1000;
   padding: 0.5rem 1rem;
@@ -257,9 +257,9 @@ h2 {
 .site-footer {
   text-align: center;
   padding: 30px 15px;
-  background: #1e293b;
+  background: rgba(0, 0, 0, 0.55); /* negro con opacidad pro */
   color: #94a3b8;
-  border-top: 2px solid #334155;
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 .social-icons {
@@ -461,7 +461,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
   margin: 20px 0;
 }
@@ -499,10 +499,24 @@ h2 {
   50% { transform: translateY(15px); }
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .logo-main { width: 160px; }
-  .logo-side { width: 100px; }
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  .logo-main {
+    width: 200px; /* más pequeño que antes */
+  }
+
+  .logo-side {
+    width: 120px;
+  }
 }
 
+@media (max-width: 600px) {
+  .logo-main {
+    width: 120px; /* bien reducido para que quepa en una fila */
+  }
 
+  .logo-side {
+    width: 80px;
+  }
+}
