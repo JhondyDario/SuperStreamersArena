@@ -23,7 +23,7 @@ html { scroll-behavior: smooth; }
 /* 🔹 Body */
 body {
   margin: 0;
-  padding-top: 80px; /* compensar header fijo */
+  padding-top: 0px; /* compensar header fijo */
   font-family: 'Poppins', sans-serif;
   background: var(--bg-dark);
   color: #fff;
@@ -64,24 +64,15 @@ h2 {
 }
 
 /* 🚀 Header */
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(6px);
+  z-index: 1000;
   padding: 10px 0;
-}
-
-.section:first-of-type {
-  margin-top: 80px; /* compensa la altura del header */
 }
 
 .header-inner {
@@ -365,4 +356,3 @@ body {
   .carousel-controls button.carousel-btn { width: 36px; height: 36px; font-size: 22px; }
   .carousel-controls .dots .dot { width: 10px; height: 10px; }
 }
-
