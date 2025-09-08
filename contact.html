@@ -90,10 +90,19 @@ main.contact-section {
     const header = document.querySelector('.site-header');
     const body = document.body;
     const alturaHeader = header.offsetHeight;
-    body.style.paddingTop = (alturaHeader / 2) + 'px'; // reducir a la mitad
+
+    // Ajuste según tamaño de pantalla
+    const anchoVentana = window.innerWidth;
+    let padding;
+    if (anchoVentana <= 600) {
+      padding = alturaHeader * 0.5; // móvil
+    } else {
+      padding = alturaHeader * 0.3; // PC
+    }
+
+    body.style.paddingTop = padding + 'px';
   }
 
-  // Ajusta al cargar y al cambiar tamaño de ventana
   window.addEventListener('load', ajustarPaddingBody);
   window.addEventListener('resize', ajustarPaddingBody);
 </script>
