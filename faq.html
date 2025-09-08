@@ -68,12 +68,12 @@
 </head>
 <body>
 
-  <script>
+<script>
   function ajustarPaddingBody() {
     const header = document.querySelector('.site-header');
     const body = document.body;
     const alturaHeader = header.offsetHeight;
-    body.style.paddingTop = alturaHeader + 'px';
+    body.style.paddingTop = (alturaHeader / 2) + 'px'; // reducir a la mitad
   }
 
   // Ajusta al cargar y al cambiar tamaño de ventana
