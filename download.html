@@ -24,74 +24,61 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+  justify-content: center;
 }
 
-.download-main {
-  flex: 2 1 500px;
-  background: rgba(0,0,0,0.55);
-  border-radius: 16px;
-  padding: 30px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-  text-align: left;
-}
-
-.download-main h2 {
-  font-family: 'Orbitron', sans-serif;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
-.download-main p {
-  color: var(--text-light);
-  margin-bottom: 25px;
-}
-
-.download-main .btn-download {
-  display: block;
-  width: 220px;
+/* 🔹 Botones grandes y animados */
+.download-btn {
+  flex: 1 1 400px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border-radius: 20px;
+  padding: 40px 20px;
   text-align: center;
-  margin-bottom: 15px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
   color: #fff;
-  background: var(--accent);
-  transition: 0.3s;
+  font-weight: 700;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.download-main .btn-download:hover {
-  background: #2563eb;
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(255,75,43,0.5);
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
 }
 
-.download-info {
-  flex: 1 1 200px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  padding: 25px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-  color: var(--text-light);
-  line-height: 1.8;
+.download-btn h3 {
+  margin: 0 0 10px 0;
+  font-family: 'Orbitron', sans-serif;
 }
 
-.download-extra {
-  width: 100%;
-  background: rgba(0,0,0,0.55);
-  border-radius: 16px;
-  padding: 25px;
-  margin-top: 30px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-  color: var(--text-light);
-  line-height: 1.8;
+.download-btn p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+/* Extra animación de brillo */
+.download-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 60%);
+  transform: rotate(45deg);
+  transition: transform 0.5s ease;
+}
+.download-btn:hover::after {
+  transform: rotate(45deg) translate(50%, 50%);
 }
 
 /* Responsive */
 @media(max-width:768px) {
-  .download-section { flex-direction: column; align-items: center; }
-  .download-main, .download-info, .download-extra { width: 100%; max-width: 500px; }
+  .download-btn { width: 100%; flex: unset; }
 }
 </style>
 </head>
@@ -122,7 +109,7 @@
     <nav id="nav" class="site-nav">
       <ul>
         <li><a href="./">Inicio</a></li>
-        <li><a href="./download.html">Descargar</a></li>
+        <li><a href="#download">Descargar</a></li>
         <li><a href="#changelog">Novedades</a></li>
         <li><a href="./faq.html">FAQ</a></li>
         <li><a href="./contact.html">Contacto</a></li>
@@ -133,32 +120,19 @@
 
 <!-- 🔹 Main Descargas -->
 <main class="download-section">
+  <!-- Botón PC -->
+  <a href="#" class="download-btn">
+    <h3>Descargar para PC</h3>
+    <p>Tamaño: 66.4 MB</p>
+    <p>Última versión: 0.1</p>
+  </a>
 
-  <!-- Columna principal -->
-  <div class="download-main">
-    <h2>Descargar Super Streamers Arena</h2>
-    <p>Disponible en dispositivos móviles y PC. Juega en cualquier lugar y a tu manera.</p>
-    <a href="https://jhondy.itch.io/" class="btn-download">Descargar para PC</a>
-    <a href="https://play.google.com/store/apps/dev?id=8802051905426223782l" class="btn-download">Descargar para Android</a>
-  </div>
-
-  <!-- Columna secundaria -->
-  <div class="download-info">
-    <p><strong>Tamaño:</strong><br>PC: 66.4 MB<br>Android: 121 MB</p>
-    <p><strong>Última versión:</strong> 0.1</p>
-  </div>
-
-  <!-- Columna extra debajo -->
-  <div class="download-extra">
-    <p><strong>Cantidad de jugadores:</strong> 1-4 jugadores</p>
-    <p><strong>Soporte para mandos:</strong> Sí</p>
-    <p><strong>Género:</strong> Acción, Free to Play, Party Game</p>
-    <p><strong>Desarrollador:</strong> Jhondy Games</p>
-    <p><strong>Estreno:</strong> 11 de noviembre, 2025</p>
-    <p><strong>Compras dentro de la aplicación:</strong> No</p>
-    <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
-  </div>
-
+  <!-- Botón Android -->
+  <a href="#" class="download-btn">
+    <h3>Descargar para Android</h3>
+    <p>Tamaño: 121 MB</p>
+    <p>Última versión: 0.1</p>
+  </a>
 </main>
 
 <!-- 🔹 Footer -->
