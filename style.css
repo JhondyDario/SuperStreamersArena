@@ -343,7 +343,7 @@ h2 {
   .brand-title { font-size: 1.1rem; }
   .logo-main { width: 200px; }
   .logo-side { width: 120px; }
-  .logos-container { margin-top: 120px; }
+  .logos-container { margin-top: 160px; }
 }
 
 @media (max-width: 600px) {
@@ -356,7 +356,8 @@ h2 {
   .site-nav a { font-size: 14px; }
   .carousel-controls button.carousel-btn { width: 36px; height: 36px; font-size: 22px; }
   .carousel-controls .dots .dot { width: 10px; height: 10px; }
-  .logos-container { margin-top: 100px; }
+  .logos-container { margin-top: 140px; }
 }
+
 
 
