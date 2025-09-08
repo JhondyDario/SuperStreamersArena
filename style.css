@@ -598,3 +598,14 @@ h2 {
   color: #60a5fa;
   text-decoration: underline;
 }
+
+.donate-box, .text-box {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1 1 350px;
+    max-width: 500px;
+    text-align: left; /* 🔹 texto alineado a la izquierda */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+}
