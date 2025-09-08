@@ -324,6 +324,12 @@ h2 {
   flex: 1;
 }
 
+/* 🔹 Separación solo para características */
+.features-box p {
+  margin-bottom: 12px;
+}
+
+
 .social-link {
   color: var(--accent);
   font-weight: 600;
@@ -358,7 +364,3 @@ h2 {
   .carousel-controls .dots .dot { width: 10px; height: 10px; }
   .logos-container { margin-top: 140px; }
 }
-
-
-
-
