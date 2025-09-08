@@ -138,12 +138,6 @@ h2 {
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
-.text-box {
-    background: rgba(255,255,255,0.02);
-    padding: 18px;
-    border-radius: 12px;
-}
-
 /* Ajustes del texto dentro */
 .about-text p,
 .media-container h2 {
@@ -545,6 +539,17 @@ h2 {
   }
 }
 
+/* 🔹 Caja de contenido (Donaciones y Contactos) */
+.content-box {
+  background: rgba(255, 255, 255, 0.05); /* fondo semitransparente */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: left; /* 👉 siempre alineado a la izquierda */
+  margin: 10px;
+  flex: 1;
+}
+
 .social-link {
   color: var(--accent); /* azul destacado */
   font-weight: 600;
@@ -554,47 +559,5 @@ h2 {
 
 .social-link:hover {
   color: #60a5fa; /* azul más claro al pasar el mouse */
-  text-decoration: underline;
-}
-
-/* 📩 Contacto */
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh; /* da aire vertical */
-}
-
-.contact-section .text-box {
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 6px;
-  padding: 40px 30px;
-  text-align: left;   /* 🔥 Alinea el texto como en About */
-  max-width: 800px;   /* para que no se extienda demasiado */
-  margin: 0 auto;     /* centrado el bloque, pero texto a la izquierda */
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-  backdrop-filter: blur(6px);
-}
-
-.contact-section h2 {
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  margin: 10px 0;
-  color: var(--text-light);
-  font-size: 1rem;
-}
-
-.contact-section .social-link {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-section .social-link:hover {
-  color: #60a5fa;
   text-decoration: underline;
 }
