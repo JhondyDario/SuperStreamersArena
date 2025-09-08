@@ -1,89 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contacto - Super Streamers Arena</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diario de Desarrollo - Super Streamers Arena</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #fff;
+    }
 
-<!-- Icono -->
-<link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png">
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: #1e293b;
+      border-bottom: 2px solid #334155;
+    }
 
-<!-- Tipografías -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
 
-<!-- CSS principal -->
-<link rel="stylesheet" href="style.css">
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-<!-- Estilos específicos de contacto -->
-<style>
-/* 🗂 Layout de Contacto */
-.contact-grid {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    .changelog-entry {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #1e293b;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: relative;
+    }
 
-/* 🔹 Cuadros de contenido */
-.content-box {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 12px;
-    flex: 1 1 350px;
-    max-width: 500px;
-    text-align: left;
-    color: #fff;
-}
+    .changelog-entry h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.3em;
+    }
 
-/* GIF centrado en donaciones */
-.content-box img {
-    display: block;
-    margin: 0 auto 20px;
-}
+    .changelog-entry small {
+      color: #94a3b8;
+    }
 
-/* Botón PayPal centrado */
-.paypal-center {
-    text-align: center;
-    margin-top: 15px;
-}
-.paypal-btn {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 8px;
-    background: #ffc439;
-    color: #111;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.paypal-btn:hover {
-    background: #e0ad2f;
-}
+    .changelog-entry p {
+      margin-top: 12px;
+      line-height: 1.6;
+    }
 
-/* Separación entre header y contenido */
-main.contact-section {
-    margin-top: 100px; /* espacio para header fijo */
-    margin-bottom: 40px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .content-box {
-    max-width: 100%;
-  }
-}
-</style>
+    /* 🔹 Etiqueta "Nuevo" */
+    .nuevo {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #2563eb;
+      color: white;
+      font-size: 0.75em;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
-<body class="contact-page">
+<body>
 
 <script>
   function ajustarPaddingBody() {
@@ -116,58 +101,54 @@ main.contact-section {
       </a>
       <nav id="nav" class="site-nav">
         <ul>
-          <li><a href="./">Inicio</a></li>
-          <li><a href="./download.html">Descargar</a></li>
-          <li><a href="#changelog">Novedades</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-          <li><a href="./contact.html">Contacto</a></li>
+        <li><a href="./">Inicio</a></li>
+        <li><a href="./download.html">Descargar</a></li>
+        <li><a href="./changelog.html">Actualizaciones</a></li>
+        <li><a href="./faq.html">Consulta</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
+    
+  <header>
+    <h1>📖 Diario de Desarrollo</h1>
+    <p>Super Streamers Arena</p>
+  </header>
 
-<!-- 🔹 Main -->
-<main class="section wrap contact-section">
-  <div class="contact-grid">
+  <section>
 
-    <!-- 🔹 Donaciones -->
-    <div class="content-box">
-      <h2 style="margin-bottom:15px;">Apoya el proyecto</h2>
-      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/gifs/animation0.gif" 
-           alt="Apoya el proyecto"
-           style="max-width:220px; margin-bottom:20px;">
-      <p style="margin-bottom:15px;">
-        Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.</p>
-      <p class="espaciado"> Todo lo recaudado irá directamente a mejorar el proyecto:
+    <!-- 🔹 Entrada más reciente con etiqueta "Nuevo" -->
+    <div class="changelog-entry">
+      <span class="nuevo">NUEVO</span>
+      <h3>🎮 Primeros comentarios de la comunidad</h3>
+      <small>15 de noviembre, 2025</small>
+      <p>
+        Después del estreno, recibimos <strong>feedback positivo</strong> de los jugadores.  
+        Estamos trabajando en nuevos modos de juego y mejoras para la experiencia online.  
+        ¡Gracias por ser parte de esta comunidad que apenas comienza!
       </p>
-      <div class="paypal-center">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank"
-           class="paypal-btn">
-          Donar con PayPal
-        </a>
-      </div>
     </div>
 
-    <!-- 🔹 Contactos -->
-    <div class="content-box">
-      <h2 style="margin-bottom:15px;">Contactos y enlaces</h2>
-      <p class="espaciado">¿Cómo estás? espero que bien, recuerda que puedes seguirme y contactarme a través de mis redes y plataformas:</p>
-      <div style="margin-top:25px; line-height:2;">
-        <p>Youtube: <a class="social-link" href="https://www.youtube.com/@Jhondy" target="_blank">@Jhondy</a></p>
-        <p>Twitter: <a class="social-link" href="https://jhondy.itch.io/" target="_blank">@Jhondy</a></p>
-        <p>Discord: <a class="social-link" href="https://discord.gg/55fvyBf5" target="_blank">@Jhondy</a></p>	
-        <p>Google Play: <a class="social-link" href="https://play.google.com/store/apps/dev?id=8802051905426223782" target="_blank">@Jhondy_Games</a></p>
-      </div>
+    <!-- 🔹 Entrada anterior -->
+    <div class="changelog-entry">
+      <h3>🚀 Estreno oficial de Super Streamers Arena</h3>
+      <small>11 de noviembre, 2025</small>
+      <p>
+        ¡Hoy lanzamos oficialmente <strong>Super Streamers Arena</strong> en Android y PC!  
+        Gracias a todos los que apoyaron este proyecto desde el inicio.  
+        El juego es totalmente <strong>Free to Play</strong> y con soporte para 1-4 jugadores.
+      </p>
     </div>
 
-  </div>
-</main>
+  </section>
 
-<!-- 🔹 Footer -->
-<footer class="site-footer">
-  <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
-  <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos, todos los recursos relacionados fueron generados con inteligencia artificial.</p>
-  <div class="social-icons">
+  <!-- 🔹 Footer -->
+  <footer class="site-footer">
+    <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
+    <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos, todos los recursos relacionados fueron generados con inteligencia artificial.</p>
+
+    <div class="social-icons">
       <a href="https://www.youtube.com/@Jhondy" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social1.png" alt="youtube"> 
       </a>
@@ -177,8 +158,8 @@ main.contact-section {
       <a href="https://discord.gg/55fvyBf5" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="discord"> 
       </a>
-  </div>
-</footer>
-
+    </div>
+  </footer>
+    
 </body>
 </html>
