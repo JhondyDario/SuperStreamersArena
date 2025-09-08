@@ -61,13 +61,25 @@
     }
 
     @media(max-width:600px){
-      .faq-section { margin: 0 15px 40px 15px }
+      .faq-section { margin: 100px 15px 40px 15px; }
       .faq-answer { padding-left: 32px; }
-      padding-top: 80px;
     }
   </style>
 </head>
 <body>
+
+  <script>
+  function ajustarPaddingBody() {
+    const header = document.querySelector('.site-header');
+    const body = document.body;
+    const alturaHeader = header.offsetHeight;
+    body.style.paddingTop = alturaHeader + 'px';
+  }
+
+  // Ajusta al cargar y al cambiar tamaño de ventana
+  window.addEventListener('load', ajustarPaddingBody);
+  window.addEventListener('resize', ajustarPaddingBody);
+</script>
 
   <!-- 🔹 Header -->
   <header class="site-header">
