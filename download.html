@@ -12,14 +12,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #0f172a;
-  color: #fff;
-}
+<!-- ✅ CSS Global -->
+<link rel="stylesheet" href="style.css">
 
+<!-- ✅ CSS solo de Descargas -->
+<style>
 /* 🔹 Layout Descargas */
 .download-grid {
   display: flex;
@@ -30,7 +27,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* 🔹 Columna izquierda (botones) */
 .download-column {
   flex: 2;
   display: flex;
@@ -38,7 +34,6 @@ body {
   gap: 30px;
 }
 
-/* 🔹 Botones grandes estilo azulado oscuro */
 .download-btn {
   background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   border-radius: 20px;
@@ -65,13 +60,11 @@ body {
   font-size: 0.95em;
 }
 
-/* Descripción debajo de cada botón */
 .download-desc {
   font-size: 0.95em;
   color: #a5b4fc;
 }
 
-/* 🔹 Columna derecha (especificaciones) */
 .specs-column {
   flex: 1;
   background: rgba(30,58,138,0.25);
@@ -91,70 +84,60 @@ body {
 
 /* Responsive */
 @media(max-width: 900px) {
-  .download-grid {
-    flex-direction: column;
-  }
-  .download-column, .specs-column {
-    flex: unset;
-    width: 100%;
-  }
+  .download-grid { flex-direction: column; }
+  .download-column, .specs-column { flex: unset; width: 100%; }
 }
 </style>
 </head>
 <body>
+  
+  <!-- 🔹 Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./">
+        <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
+        <span class="brand-title">Super Streamers Arena</span>
+      </a>
+      <nav id="nav" class="site-nav">
+        <ul>
+          <li><a href="./">Inicio</a></li>
+          <li><a href="./download.html">Descargar</a></li>
+          <li><a href="#changelog">Novedades</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- 🔹 Header -->
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="./">
-      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
-      <span class="brand-title">Super Streamers Arena</span>
-    </a>
-    <nav id="nav" class="site-nav">
-      <ul>
-        <li><a href="./">Inicio</a></li>
-        <li><a href="./download.html">Descargar</a></li>
-        <li><a href="#changelog">Novedades</a></li>
-        <li><a href="./faq.html">FAQ</a></li>
-        <li><a href="./contact.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <main class="download-grid">
+    <!-- Columna izquierda -->
+    <div class="download-column">
+      <a href="https://jhondy.itch.io/" class="download-btn">
+        Descargar para PC
+        <p>Tamaño: 66.4 MB | Última versión: 0.1</p>
+      </a>
+      <p class="download-desc">Disponible en PC para jugar cómodamente en tu ordenador.</p>
 
-<!-- 🔹 Main Descargas -->
-<main class="download-grid">
+      <a href="https://play.google.com/store/apps/dev?id=8802051905426223782" class="download-btn">
+        Descargar para Android
+        <p>Tamaño: 121 MB | Última versión: 0.1</p>
+      </a>
+      <p class="download-desc">Disponible en dispositivos móviles para jugar en cualquier lugar.</p>
+    </div>
 
-  <!-- Columna izquierda: botones -->
-  <div class="download-column">
-    <!-- Botón PC -->
-    <a href="https://jhondy.itch.io/" class="download-btn">
-      Descargar para PC
-      <p>Tamaño: 66.4 MB | Última versión: 0.1</p>
-    </a>
-    <p class="download-desc">Disponible en PC para jugar cómodamente en tu ordenador.</p>
-
-    <!-- Botón Android -->
-    <a href="https://play.google.com/store/apps/dev?id=8802051905426223782" class="download-btn">
-      Descargar para Android
-      <p>Tamaño: 121 MB | Última versión: 0.1</p>
-    </a>
-    <p class="download-desc">Disponible en dispositivos móviles para jugar en cualquier lugar.</p>
-  </div>
-
-  <!-- Columna derecha: especificaciones -->
-  <div class="specs-column">
-    <h3>Especificaciones del juego</h3>
-    <p><strong>Cantidad de jugadores:</strong> 1-4 jugadores</p>
-    <p><strong>Soporte para mandos:</strong> Sí</p>
-    <p><strong>Género:</strong> Acción, Free to Play, Party Game</p>
-    <p><strong>Desarrollador:</strong> Jhondy Games</p>
-    <p><strong>Estreno:</strong> 11 de noviembre, 2025</p>
-    <p><strong>Compras dentro de la aplicación:</strong> No</p>
-    <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
-  </div>
-
-</main>
+    <!-- Columna derecha -->
+    <div class="specs-column">
+      <h3>Especificaciones del juego</h3>
+      <p><strong>Cantidad de jugadores:</strong> 1-4 jugadores</p>
+      <p><strong>Soporte para mandos:</strong> Sí</p>
+      <p><strong>Género:</strong> Acción, Free to Play, Party Game</p>
+      <p><strong>Desarrollador:</strong> Jhondy Games</p>
+      <p><strong>Estreno:</strong> 11 de noviembre, 2025</p>
+      <p><strong>Compras dentro de la aplicación:</strong> No</p>
+      <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
+    </div>
+  </main>
 
 <!-- 🔹 Footer -->
 <footer class="site-footer">
@@ -171,7 +154,5 @@ body {
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="discord"> 
       </a>
   </div>
-</footer>
-
 </body>
 </html>
