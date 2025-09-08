@@ -12,31 +12,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 
-<!-- CSS principal -->
-<link rel="stylesheet" href="style.css">
-
 <style>
-/* 🔹 Layout Descargas */
-.download-section {
-  max-width: 1200px;
-  margin: 140px auto 60px auto;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #fff;
 }
 
-/* 🔹 Botones grandes y animados */
+/* 🔹 Layout Descargas */
+.download-grid {
+  display: flex;
+  max-width: 1200px;
+  margin: 140px auto 60px auto;
+  gap: 40px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+/* 🔹 Columna izquierda (botones) */
+.download-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* 🔹 Botones grandes estilo azulado oscuro */
 .download-btn {
-  flex: 1 1 400px;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   border-radius: 20px;
-  padding: 40px 20px;
+  padding: 35px 20px;
   text-align: center;
-  color: #fff;
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: 1.3em;
+  color: #fff;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
   position: relative;
@@ -45,59 +55,53 @@
 
 .download-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(255,75,43,0.5);
-  background: linear-gradient(135deg, #ff4b2b, #ff416c);
-}
-
-.download-btn h3 {
-  margin: 0 0 10px 0;
-  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 8px 25px rgba(59,130,246,0.5);
+  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
 }
 
 .download-btn p {
   margin: 5px 0;
-  font-size: 0.9em;
-  color: #fff;
+  font-weight: 500;
+  font-size: 0.95em;
 }
 
-/* Extra animación de brillo */
-.download-btn::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 60%);
-  transform: rotate(45deg);
-  transition: transform 0.5s ease;
+/* Descripción debajo de cada botón */
+.download-desc {
+  font-size: 0.95em;
+  color: #a5b4fc;
 }
-.download-btn:hover::after {
-  transform: rotate(45deg) translate(50%, 50%);
+
+/* 🔹 Columna derecha (especificaciones) */
+.specs-column {
+  flex: 1;
+  background: rgba(30,58,138,0.25);
+  border-radius: 16px;
+  padding: 25px 20px;
+  min-width: 250px;
+  line-height: 1.8;
+}
+
+.specs-column h3 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 15px;
+  color: #fff;
+  border-left: 5px solid #3b82f6;
+  padding-left: 10px;
 }
 
 /* Responsive */
-@media(max-width:768px) {
-  .download-btn { width: 100%; flex: unset; }
+@media(max-width: 900px) {
+  .download-grid {
+    flex-direction: column;
+  }
+  .download-column, .specs-column {
+    flex: unset;
+    width: 100%;
+  }
 }
 </style>
 </head>
 <body>
-
-<script>
-  function ajustarPaddingBody() {
-    const header = document.querySelector('.site-header');
-    const body = document.body;
-    const alturaHeader = header.offsetHeight;
-    const anchoVentana = window.innerWidth;
-    let padding;
-    if (anchoVentana <= 600) { padding = alturaHeader * 0.5; } 
-    else { padding = alturaHeader * 0.25; }
-    body.style.paddingTop = padding + 'px';
-  }
-  window.addEventListener('load', ajustarPaddingBody);
-  window.addEventListener('resize', ajustarPaddingBody);
-</script>
 
 <!-- 🔹 Header -->
 <header class="site-header">
@@ -119,20 +123,37 @@
 </header>
 
 <!-- 🔹 Main Descargas -->
-<main class="download-section">
-  <!-- Botón PC -->
-  <a href="https://jhondy.itch.io/" class="download-btn">
-    <h3>Descargar para PC</h3>
-    <p>Tamaño: 66.4 MB</p>
-    <p>Última versión: 0.1</p>
-  </a>
+<main class="download-grid">
 
-  <!-- Botón Android -->
-  <a href="https://play.google.com/store/apps/dev?id=8802051905426223782" class="download-btn">
-    <h3>Descargar para Android</h3>
-    <p>Tamaño: 121 MB</p>
-    <p>Última versión: 0.1</p>
-  </a>
+  <!-- Columna izquierda: botones -->
+  <div class="download-column">
+    <!-- Botón PC -->
+    <a href="https://jhondy.itch.io/" class="download-btn">
+      Descargar para PC
+      <p>Tamaño: 66.4 MB | Última versión: 0.1</p>
+    </a>
+    <p class="download-desc">Disponible en PC para jugar cómodamente en tu ordenador.</p>
+
+    <!-- Botón Android -->
+    <a href="https://play.google.com/store/apps/dev?id=8802051905426223782" class="download-btn">
+      Descargar para Android
+      <p>Tamaño: 121 MB | Última versión: 0.1</p>
+    </a>
+    <p class="download-desc">Disponible en dispositivos móviles para jugar en cualquier lugar.</p>
+  </div>
+
+  <!-- Columna derecha: especificaciones -->
+  <div class="specs-column">
+    <h3>Especificaciones del juego</h3>
+    <p><strong>Cantidad de jugadores:</strong> 1-4 jugadores</p>
+    <p><strong>Soporte para mandos:</strong> Sí</p>
+    <p><strong>Género:</strong> Acción, Free to Play, Party Game</p>
+    <p><strong>Desarrollador:</strong> Jhondy Games</p>
+    <p><strong>Estreno:</strong> 11 de noviembre, 2025</p>
+    <p><strong>Compras dentro de la aplicación:</strong> No</p>
+    <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
+  </div>
+
 </main>
 
 <!-- 🔹 Footer -->
