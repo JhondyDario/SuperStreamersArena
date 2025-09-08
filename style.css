@@ -279,7 +279,7 @@ h2 {
   align-items: center;
   gap: 1.2rem;
   flex-wrap: wrap;
-  margin: 120px 0 40px 0; /* ↑ margen superior más grande para bajar los logos */
+  margin: 100px 0 40px 0; /* ↑ margen superior más grande para bajar los logos */
 }
 
 .logo-main {
@@ -358,4 +358,5 @@ h2 {
   .carousel-controls .dots .dot { width: 10px; height: 10px; }
   .logos-container { margin-top: 100px; }
 }
+
 
