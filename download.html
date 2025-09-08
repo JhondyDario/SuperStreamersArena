@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contacto - Super Streamers Arena</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descargas - Super Streamers Arena</title>
 
 <!-- Icono -->
 <link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png">
@@ -15,130 +15,150 @@
 <!-- CSS principal -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Estilos específicos de contacto -->
 <style>
-/* 🗂 Layout de Contacto */
-.contact-grid {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* 🔹 Layout Descargas */
+.download-section {
+  max-width: 1200px;
+  margin: 140px auto 60px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-/* 🔹 Cuadros de contenido */
-.content-box {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 12px;
-    flex: 1 1 350px;
-    max-width: 500px;
-    text-align: left;
-    color: #fff;
+.download-main {
+  flex: 2 1 500px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  text-align: left;
 }
 
-/* GIF centrado en donaciones */
-.content-box img {
-    display: block;
-    margin: 0 auto 20px;
+.download-main h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent);
+  margin-bottom: 20px;
 }
 
-/* Botón PayPal centrado */
-.paypal-center {
-    text-align: center;
-    margin-top: 15px;
-}
-.paypal-btn {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 8px;
-    background: #ffc439;
-    color: #111;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.paypal-btn:hover {
-    background: #e0ad2f;
+.download-main p {
+  color: var(--text-light);
+  margin-bottom: 25px;
 }
 
-/* Separación entre header y contenido */
-main.contact-section {
-    margin-top: 100px; /* espacio para header fijo */
-    margin-bottom: 40px;
+.download-main .btn-download {
+  display: block;
+  width: 220px;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent);
+  transition: 0.3s;
+}
+
+.download-main .btn-download:hover {
+  background: #2563eb;
+}
+
+.download-info {
+  flex: 1 1 200px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.download-extra {
+  width: 100%;
+  background: rgba(0,0,0,0.55);
+  border-radius: 16px;
+  padding: 25px;
+  margin-top: 30px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  color: var(--text-light);
+  line-height: 1.8;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .contact-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .content-box {
-    max-width: 100%;
-  }
+@media(max-width:768px) {
+  .download-section { flex-direction: column; align-items: center; }
+  .download-main, .download-info, .download-extra { width: 100%; max-width: 500px; }
 }
 </style>
 </head>
-<body class="contact-page">
+<body>
 
-  <!-- 🔹 Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="./">
-        <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
-        <span class="brand-title">Super Streamers Arena</span>
-      </a>
-      <nav id="nav" class="site-nav">
-        <ul>
-          <li><a href="./">Inicio</a></li>
-          <li><a href="#download">Descargar</a></li>
-          <li><a href="#changelog">Novedades</a></li>
-          <li><a href="./faq.html">FAQ</a></li>
-          <li><a href="./contact.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<script>
+  function ajustarPaddingBody() {
+    const header = document.querySelector('.site-header');
+    const body = document.body;
+    const alturaHeader = header.offsetHeight;
+    const anchoVentana = window.innerWidth;
+    let padding;
+    if (anchoVentana <= 600) { padding = alturaHeader * 0.5; } 
+    else { padding = alturaHeader * 0.3; }
+    body.style.paddingTop = padding + 'px';
+  }
+  window.addEventListener('load', ajustarPaddingBody);
+  window.addEventListener('resize', ajustarPaddingBody);
+</script>
 
-<!-- 🔹 Main -->
-<main class="section wrap contact-section">
-  <div class="contact-grid">
-
-    <!-- 🔹 Donaciones -->
-    <div class="content-box">
-      <h2 style="margin-bottom:15px;">Apoya el proyecto</h2>
-      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/gifs/animation0.gif" 
-           alt="Apoya el proyecto"
-           style="max-width:220px; margin-bottom:20px;">
-      <p style="margin-bottom:15px;">
-        Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.</p>
-      <p class="espaciado"> Todo lo recaudado irá directamente a mejorar el proyecto:
-      </p>
-      <div class="paypal-center">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank"
-           class="paypal-btn">
-          Donar con PayPal
-        </a>
-      </div>
-    </div>
-
-    <!-- 🔹 Contactos -->
-    <div class="content-box">
-      <h2 style="margin-bottom:15px;">Contactos y enlaces</h2>
-      <p class="espaciado">¿Cómo estás? espero que bien, recuerda que puedes seguirme y contactarme a través de mis redes y plataformas:</p>
-      <div style="margin-top:25px; line-height:2;">
-        <p>Youtube: <a class="social-link" href="https://www.youtube.com/@Jhondy" target="_blank">@Jhondy</a></p>
-        <p>Twitter: <a class="social-link" href="https://jhondy.itch.io/" target="_blank">@Jhondy</a></p>
-        <p>Discord: <a class="social-link" href="https://discord.gg/55fvyBf5" target="_blank">@Jhondy</a></p>	
-        <p>Google Play: <a class="social-link" href="https://play.google.com/store/apps/dev?id=8802051905426223782" target="_blank">@Jhondy_Games</a></p>
-      </div>
-    </div>
-
+<!-- 🔹 Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
+      <span class="brand-title">Super Streamers Arena</span>
+    </a>
+    <nav id="nav" class="site-nav">
+      <ul>
+        <li><a href="./">Inicio</a></li>
+        <li><a href="#download">Descargar</a></li>
+        <li><a href="#changelog">Novedades</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
+
+<!-- 🔹 Main Descargas -->
+<main class="download-section">
+
+  <!-- Columna principal -->
+  <div class="download-main">
+    <h2>Descargar Super Streamers Arena</h2>
+    <p>Disponible en dispositivos móviles y PC. Juega en cualquier lugar y a tu manera.</p>
+    <a href="#" class="btn-download">Descargar para PC</a>
+    <a href="#" class="btn-download">Descargar para Android</a>
+  </div>
+
+  <!-- Columna secundaria -->
+  <div class="download-info">
+    <p><strong>Tamaño:</strong><br>PC: 66.4 MB<br>Android: 121 MB</p>
+    <p><strong>Última versión:</strong> 0.1</p>
+  </div>
+
+  <!-- Columna extra debajo -->
+  <div class="download-extra">
+    <p><strong>Cantidad de jugadores:</strong> 1-4 jugadores</p>
+    <p><strong>Soporte para mandos:</strong> Sí</p>
+    <p><strong>Género:</strong> Acción, Free to Play, Party Game</p>
+    <p><strong>Desarrollador:</strong> Jhondy Games</p>
+    <p><strong>Estreno:</strong> 11 de noviembre, 2025</p>
+    <p><strong>Compras dentro de la aplicación:</strong> No</p>
+    <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
+  </div>
+
 </main>
 
 <!-- 🔹 Footer -->
