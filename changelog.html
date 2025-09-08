@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diario de Desarrollo - Super Streamers Arena</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #fff;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Actualizaciones - Super Streamers Arena</title>
 
-    header {
-      text-align: center;
-      padding: 30px 20px;
-      background: #1e293b;
-      border-bottom: 2px solid #334155;
-    }
+<!-- Icono -->
+<link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png">
 
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
+<!-- Tipografías -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+<!-- CSS principal -->
+<link rel="stylesheet" href="style.css">
 
-    .changelog-entry {
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: 12px;
-      background: #1e293b;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      position: relative;
-    }
+<!-- Estilos específicos del changelog (scoped a esta página) -->
+<style>
+  /* Separación entre header y contenido (mismo criterio que contact) */
+  main.changelog-section {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
 
-    .changelog-entry h3 {
-      margin: 0 0 5px 0;
-      font-size: 1.3em;
-    }
+  /* Caja título principal del changelog */
+  .changelog-hero h1 {
+    margin-bottom: 6px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .changelog-hero p {
+    color: var(--text-muted);
+  }
 
-    .changelog-entry small {
-      color: #94a3b8;
-    }
+  /* Entradas del diario */
+  .dev-entry {
+    position: relative;
+  }
+  .dev-entry h3 {
+    margin: 0 0 6px 0;
+  }
+  .dev-entry .meta {
+    color: var(--text-muted);
+    font-size: 0.95em;
+    margin-bottom: 10px;
+  }
+  .dev-entry p {
+    line-height: 1.7;
+  }
 
-    .changelog-entry p {
-      margin-top: 12px;
-      line-height: 1.6;
-    }
+  /* Etiqueta NUEVO en la más reciente */
+  .badge-new {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+  }
 
-    /* 🔹 Etiqueta "Nuevo" */
-    .nuevo {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: #2563eb;
-      color: white;
-      font-size: 0.75em;
-      font-weight: bold;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-  </style>
+  /* Mini guía de edición (opcional) */
+  .edit-hint {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-top: 8px;
+  }
+</style>
 </head>
-<body>
+<body class="changelog-page">
 
 <script>
+  // mismo ajuste que usas en otras páginas para el header fijo
   function ajustarPaddingBody() {
     const header = document.querySelector('.site-header');
     const body = document.body;
     const alturaHeader = header.offsetHeight;
 
-    // Ajuste según tamaño de pantalla
     const anchoVentana = window.innerWidth;
     let padding;
     if (anchoVentana <= 600) {
@@ -84,71 +86,70 @@
     } else {
       padding = alturaHeader * 0.25; // PC
     }
-
     body.style.paddingTop = padding + 'px';
   }
-
   window.addEventListener('load', ajustarPaddingBody);
   window.addEventListener('resize', ajustarPaddingBody);
 </script>
 
-  <!-- 🔹 Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="./">
-        <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
-        <span class="brand-title">Super Streamers Arena</span>
-      </a>
-      <nav id="nav" class="site-nav">
-        <ul>
+<!-- 🔹 Header (igual al de contact) -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
+      <span class="brand-title">Super Streamers Arena</span>
+    </a>
+    <nav id="nav" class="site-nav">
+      <ul>
         <li><a href="./">Inicio</a></li>
         <li><a href="./download.html">Descargar</a></li>
         <li><a href="./changelog.html">Actualizaciones</a></li>
         <li><a href="./faq.html">Consulta</a></li>
         <li><a href="./contact.html">Contacto</a></li>
-        </ul>
-      </nav>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- 🔹 Main -->
+<main class="section wrap changelog-section">
+  <!-- Cabecera del changelog -->
+  <div class="content-box changelog-hero">
+    <h1>Diario de Desarrollo</h1>
+    <p>Notas de versión, avances y mensajes del desarrollador.</p>
+    <div class="edit-hint">
+      <strong>Cómo editar:</strong> Para añadir una nueva noticia, copia una <em>.content-box.dev-entry</em> y pégala arriba del todo. Si es la más reciente, deja la etiqueta <code>&lt;span class="badge-new"&gt;NUEVO&lt;/span&gt;</code>.
     </div>
-  </header>
-    
-  <header>
-    <h1>📖 Diario de Desarrollo</h1>
-    <p>Super Streamers Arena</p>
-  </header>
+  </div>
 
-  <section>
+  <!-- Entrada más reciente -->
+  <article class="content-box dev-entry">
+    <span class="badge-new">NUEVO</span>
+    <h3>🎮 Primeros comentarios de la comunidad</h3>
+    <div class="meta">15 de noviembre, 2025</div>
+    <p>
+      Tras el estreno, recopilamos <strong>feedback</strong> de los jugadores y ya estamos puliendo
+      la experiencia online, corrigiendo errores menores y preparando <strong>nuevos modos</strong>.
+      ¡Gracias por todo el apoyo y por compartir sugerencias!
+    </p>
+  </article>
 
-    <!-- 🔹 Entrada más reciente con etiqueta "Nuevo" -->
-    <div class="changelog-entry">
-      <span class="nuevo">NUEVO</span>
-      <h3>🎮 Primeros comentarios de la comunidad</h3>
-      <small>15 de noviembre, 2025</small>
-      <p>
-        Después del estreno, recibimos <strong>feedback positivo</strong> de los jugadores.  
-        Estamos trabajando en nuevos modos de juego y mejoras para la experiencia online.  
-        ¡Gracias por ser parte de esta comunidad que apenas comienza!
-      </p>
-    </div>
+  <!-- Entrada anterior -->
+  <article class="content-box dev-entry">
+    <h3>🚀 Estreno oficial de Super Streamers Arena</h3>
+    <div class="meta">11 de noviembre, 2025</div>
+    <p>
+      Se ha lanzado oficialmente el videojuego <strong>Super Streamers Arena</strong> (SSA). Este apartado será utilizado para compartirles novedades previas al lanzamiento de la siguiente versión del videojuego o alguna noticia sumamente importante que impacte el estado actual y a futuro del juego, para mi es muy importante recibir el feedback de cada jugador, por lo que de alguna manera, estaré compartiendo un apartado de opiniones o críticas constructivas. 
+      Ah, otra cosa, estoy regalando códigos para cangearlos por mogemas a los que visiten los videos lanzados en las redes sociales, así que no dejes de seguirme para estar al tanto de más regalos y novedades.
+    </p>
+  </article>
+</main>
 
-    <!-- 🔹 Entrada anterior -->
-    <div class="changelog-entry">
-      <h3>🚀 Estreno oficial de Super Streamers Arena</h3>
-      <small>11 de noviembre, 2025</small>
-      <p>
-        ¡Hoy lanzamos oficialmente <strong>Super Streamers Arena</strong> en Android y PC!  
-        Gracias a todos los que apoyaron este proyecto desde el inicio.  
-        El juego es totalmente <strong>Free to Play</strong> y con soporte para 1-4 jugadores.
-      </p>
-    </div>
-
-  </section>
-
-  <!-- 🔹 Footer -->
-  <footer class="site-footer">
-    <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
-    <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos, todos los recursos relacionados fueron generados con inteligencia artificial.</p>
-
-    <div class="social-icons">
+<!-- 🔹 Footer -->
+<footer class="site-footer">
+  <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
+  <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos, todos los recursos relacionados fueron generados con inteligencia artificial.</p>
+  <div class="social-icons">
       <a href="https://www.youtube.com/@Jhondy" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social1.png" alt="youtube"> 
       </a>
@@ -158,8 +159,8 @@
       <a href="https://discord.gg/55fvyBf5" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="discord"> 
       </a>
-    </div>
-  </footer>
-    
+  </div>
+</footer>
+
 </body>
 </html>
