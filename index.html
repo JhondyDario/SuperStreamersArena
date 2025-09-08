@@ -11,6 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Ajuste dinámico del padding-top para header fijo (se usa en otras páginas) -->
+  <script>
+    function ajustarPaddingBody() {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const body = document.body;
+      const alturaHeader = header.offsetHeight || 80;
+
+      const anchoVentana = window.innerWidth;
+      let padding;
+      if (anchoVentana <= 600) {
+        padding = alturaHeader * 0.5; // móvil
+      } else {
+        padding = alturaHeader * 0.25; // PC
+      }
+      body.style.paddingTop = padding + 'px';
+    }
+    window.addEventListener('load', ajustarPaddingBody);
+    window.addEventListener('resize', ajustarPaddingBody);
+  </script>
 </head>
 <body class="home-page">
 
@@ -23,11 +44,11 @@
       </a>
       <nav id="nav" class="site-nav">
         <ul>
-        <li><a href="./">Inicio</a></li>
-        <li><a href="./download.html">Descargar</a></li>
-        <li><a href="./changelog.html">Actualizaciones</a></li>
-        <li><a href="./faq.html">Consulta</a></li>
-        <li><a href="./contact.html">Contacto</a></li>
+          <li><a href="./">Inicio</a></li>
+          <li><a href="./download.html">Descargar</a></li>
+          <li><a href="./changelog.html">Actualizaciones</a></li>
+          <li><a href="./faq.html">Consulta</a></li>
+          <li><a href="./contact.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -37,30 +58,27 @@
   <main>
 
     <!-- 🔹 Logos -->
-    <div class="logos-container">
-      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/logos/logo1.png" 
+    <div class="logos-container" aria-hidden="false">
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/logos/logo1.png"
            alt="Logo 1" class="logo-side logo-left">
-      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/logos/logo0.png" 
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/logos/logo0.png"
            alt="Logo central" class="logo-main">
-      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/logos/logo2.png" 
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/logos/logo2.png"
            alt="Logo 2" class="logo-side logo-right">
     </div>
 
-    <!-- 🔹 Sección About -->
+    <!-- 🔹 Sección: Acerca del juego -->
     <section id="about" class="section wrap">
       <div class="text-box about-box">
         <div class="about-text">
           <h2>Acerca del juego</h2>
           <p>Super Streamers Arena es un juego de peleas tipo arena con toques de party games, pensado para partidas rápidas entre amigos. Desbloquea efectos de partículas, librería de imágenes y sonidos, así como personalizar a tu streamer para dominar la tabla de visitas en el modo clásico arcade.</p>
-          <p class="espaciado"><strong>Características:</strong> Modos de juego como multijugador local y online; sistema de logros, tienda de personalización, sistema de puntos mediante visitas y eventos especiales para la comunidad.</p>  
-          <h2 class="espaciado">Historia</h2>
-          <p>La inteligencia artificial ha mejorado bastante en los últimos años, un millonario misterioso contrató a los mejores programadores del mundo para crear un universo digital alterno a la realidad, lleno de criaturas impresionantes, orbes llenos de luces y con personajes con la extraña manía de querer ser mejor que el resto, que recuerdan al ambiente de los streamers de salseo.</p>
-          <p class="espaciado">Varios streamers fueron teletransportados a este mundo virtual tras haber sido engañados con recibir más suscriptores a cambio de hacer publicidad. Tras varios intentos, nuestros protagonistas encontrarán la manera de trabajar como equipo para regresar con vida (y cuenta de directos) a sus hogares, pero... ¿qué tan difícil será unir fuerzas para escapar de este mundo?</p>
+          <p class="espaciado"><strong>Características:</strong> Modos de juego como multijugador local y online; sistema de logros, tienda de personalización, sistema de puntos mediante visitas y eventos especiales para la comunidad.</p>
         </div>
       </div>
     </section>
 
-    <!-- 🔹 Sección Media -->
+    <!-- 🔹 Sección Media: Capturas + Video -->
     <section id="media" class="section wrap media-section">
       <div class="media-container">
 
@@ -78,7 +96,7 @@
             </div>
             <div class="carousel-controls">
               <button class="carousel-btn prev" aria-label="Anterior">‹</button>
-              <div class="dots"></div>
+              <div class="dots" aria-hidden="false"></div>
               <button class="carousel-btn next" aria-label="Siguiente">›</button>
             </div>
           </div>
@@ -99,6 +117,17 @@
       </div>
     </section>
 
+    <!-- 🔹 Sección: Historia (separada) -->
+    <section id="history" class="section wrap">
+      <div class="text-box about-box">
+        <div class="about-text">
+          <h2>Historia</h2>
+          <p>La inteligencia artificial ha mejorado bastante en los últimos años. Un millonario misterioso contrató a los mejores programadores del mundo para crear un universo digital alterno a la realidad, lleno de criaturas impresionantes, orbes llenos de luces y con personajes con la extraña manía de querer ser mejor que el resto, que recuerdan al ambiente de los streamers de salseo.</p>
+          <p class="espaciado">Varios streamers fueron teletransportados a este mundo virtual tras haber sido engañados con recibir más suscriptores a cambio de hacer publicidad. Tras varios intentos, nuestros protagonistas encontrarán la manera de trabajar como equipo para regresar con vida (y cuenta de directos) a sus hogares, pero... ¿qué tan difícil será unir fuerzas para escapar de este mundo?</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- 🔹 Footer -->
@@ -108,13 +137,13 @@
 
     <div class="social-icons">
       <a href="https://www.youtube.com/@Jhondy" target="_blank">
-          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social1.png" alt="youtube"> 
+          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social1.png" alt="youtube">
       </a>
       <a href="https://jhondy.itch.io/" target="_blank">
-          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social2.png" alt="itchio"> 
+          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social2.png" alt="itchio">
       </a>
       <a href="https://discord.gg/55fvyBf5" target="_blank">
-          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="discord"> 
+          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="discord">
       </a>
     </div>
   </footer>
@@ -128,51 +157,54 @@
     let currentIndex = 0;
     let autoPlayInterval;
 
-    // Crear dots dinámicos
-    slides.forEach((_, index) => {
-      const dot = document.createElement('span');
-      dot.classList.add('dot');
-      if(index === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => goToSlide(index));
-      dotsContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll('.dot');
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-        dots[i].classList.toggle('active', i === index);
+    // Evita errores si no hay slides
+    if (slides.length) {
+      // Crear dots dinámicos
+      slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if(index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
       });
-      currentIndex = index;
+
+      const dots = document.querySelectorAll('.dot');
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+          if (dots[i]) dots[i].classList.toggle('active', i === index);
+        });
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        let next = (currentIndex + 1) % slides.length;
+        showSlide(next);
+      }
+
+      function prevSlide() {
+        let prev = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(prev);
+      }
+
+      function goToSlide(index) {
+        showSlide(index);
+      }
+
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 4000);
+      }
+
+      function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); stopAutoPlay(); startAutoPlay(); });
+      if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
+
+      startAutoPlay();
     }
-
-    function nextSlide() {
-      let next = (currentIndex + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function prevSlide() {
-      let prev = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(prev);
-    }
-
-    function goToSlide(index) {
-      showSlide(index);
-    }
-
-    function startAutoPlay() {
-      autoPlayInterval = setInterval(nextSlide, 4000);
-    }
-
-    function stopAutoPlay() {
-      clearInterval(autoPlayInterval);
-    }
-
-    nextBtn.addEventListener('click', () => { nextSlide(); stopAutoPlay(); startAutoPlay(); });
-    prevBtn.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
-
-    startAutoPlay();
   </script>
 
 </body>
