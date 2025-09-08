@@ -10,6 +10,22 @@
     --text-muted: #94a3b8;
 }
 
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* asegura que quede por encima del contenido */
+  background: #0f172a; /* mismo fondo que tienes, para que no se vea raro */
+  padding: 10px 0;
+}
+
+/* Como el header ahora ocupa espacio fijo, hay que empujar el contenido */
+body {
+  margin: 0;
+  padding-top: 80px; /* ajusta según la altura de tu header */
+}
+
 /* 🔹 Reset y body */
 * {
   margin: 0;
@@ -561,3 +577,4 @@ h2 {
   color: #60a5fa; /* azul más claro al pasar el mouse */
   text-decoration: underline;
 }
+
