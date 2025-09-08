@@ -22,7 +22,7 @@
     padding: 20px;
 }
 
-.donate-box, .text-box {
+.content-box {
     background: rgba(255,255,255,0.05);
     padding: 25px;
     border-radius: 12px;
@@ -32,7 +32,7 @@
 }
 
 /* Forzar gif centrado */
-.donate-box img {
+.content-box img {
     display: block;
     margin: 0 auto 20px;
 }
@@ -56,13 +56,19 @@
     background: #e0ad2f;
 }
 
+/* Separación entre header y contenido */
+main.contact-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .contact-grid {
     flex-direction: column;
     align-items: center;
   }
-  .donate-box, .text-box {
+  .content-box {
     max-width: 100%;
   }
 }
@@ -99,16 +105,19 @@
   <!-- GIF animado -->
   <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/animation0.gif" 
        alt="Apoya el proyecto"
-       style="max-width:220px; display:block; margin-bottom:20px;">
+       style="max-width:220px; margin-bottom:20px;">
 
   <p style="margin-bottom:15px;">
     Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.  
     Todo lo recaudado irá directamente a mejorar el proyecto 🙌
   </p>
-  <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank"
-     class="paypal-btn">
-    Donar con PayPal
-  </a>
+  
+  <div class="paypal-center">
+    <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank"
+       class="paypal-btn">
+      Donar con PayPal
+    </a>
+  </div>
 </div>
 
 <!-- 🔹 Contactos -->
