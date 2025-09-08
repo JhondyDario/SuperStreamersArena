@@ -36,7 +36,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url('https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/fondo0.png') no-repeat center center;
+  background: url('https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/backgrounds/fondo0.png') no-repeat center center;
   background-size: cover;
   filter: blur(12px) brightness(0.6);
   z-index: -1;
@@ -279,7 +279,7 @@ h2 {
   align-items: center;
   gap: 1.2rem;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 100px 0 40px 0; /* ↑ margen superior más grande para bajar los logos */
 }
 
 .logo-main {
@@ -343,6 +343,7 @@ h2 {
   .brand-title { font-size: 1.1rem; }
   .logo-main { width: 200px; }
   .logo-side { width: 120px; }
+  .logos-container { margin-top: 160px; }
 }
 
 @media (max-width: 600px) {
@@ -355,4 +356,8 @@ h2 {
   .site-nav a { font-size: 14px; }
   .carousel-controls button.carousel-btn { width: 36px; height: 36px; font-size: 22px; }
   .carousel-controls .dots .dot { width: 10px; height: 10px; }
+  .logos-container { margin-top: 140px; }
 }
+
+
+
