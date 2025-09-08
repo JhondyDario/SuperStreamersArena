@@ -8,89 +8,31 @@
 <!-- Icono -->
 <link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png">
 
-<!-- Tipografías -->
+<!-- Tipografía -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 
-<!-- ✅ CSS Global -->
-<link rel="stylesheet" href="style.css">
+  <script>
+  function ajustarPaddingBody() {
+    const header = document.querySelector('.site-header');
+    const body = document.body;
+    const alturaHeader = header.offsetHeight;
 
-<!-- ✅ CSS solo de Descargas -->
-<style>
-/* 🔹 Layout Descargas */
-.download-grid {
-  display: flex;
-  max-width: 1200px;
-  margin: 140px auto 60px auto;
-  gap: 40px;
-  padding: 0 20px;
-  flex-wrap: wrap;
-}
+    // Ajuste según tamaño de pantalla
+    const anchoVentana = window.innerWidth;
+    let padding;
+    if (anchoVentana <= 600) {
+      padding = alturaHeader * 0.5; // móvil
+    } else {
+      padding = alturaHeader * 0.25; // PC
+    }
 
-.download-column {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+    body.style.paddingTop = padding + 'px';
+  }
 
-.download-btn {
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-  border-radius: 20px;
-  padding: 35px 20px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.3em;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
-  position: relative;
-  overflow: hidden;
-}
+  window.addEventListener('load', ajustarPaddingBody);
+  window.addEventListener('resize', ajustarPaddingBody);
+</script>
 
-.download-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(59,130,246,0.5);
-  background: linear-gradient(135deg, #3b82f6, #1e3a8a);
-}
-
-.download-btn p {
-  margin: 5px 0;
-  font-weight: 500;
-  font-size: 0.95em;
-}
-
-.download-desc {
-  font-size: 0.95em;
-  color: #a5b4fc;
-}
-
-.specs-column {
-  flex: 1;
-  background: rgba(30,58,138,0.25);
-  border-radius: 16px;
-  padding: 25px 20px;
-  min-width: 250px;
-  line-height: 1.8;
-}
-
-.specs-column h3 {
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 15px;
-  color: #fff;
-  border-left: 5px solid #3b82f6;
-  padding-left: 10px;
-}
-
-/* Responsive */
-@media(max-width: 900px) {
-  .download-grid { flex-direction: column; }
-  .download-column, .specs-column { flex: unset; width: 100%; }
-}
-</style>
-</head>
-<body>
-  
   <!-- 🔹 Header -->
   <header class="site-header">
     <div class="header-inner">
@@ -110,36 +52,110 @@
     </div>
   </header>
 
-  <main class="download-grid">
-    <!-- Columna izquierda -->
-    <div class="download-column">
-      <a href="https://jhondy.itch.io/" class="download-btn">
-        Descargar para PC
-        <p>Tamaño: 66.4 MB | Última versión: 0.1</p>
-      </a>
-      <p class="download-desc">Disponible en PC para jugar cómodamente en tu ordenador.</p>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: #fff;
+}
 
-      <a href="https://play.google.com/store/apps/dev?id=8802051905426223782" class="download-btn">
-        Descargar para Android
-        <p>Tamaño: 121 MB | Última versión: 0.1</p>
-      </a>
-      <p class="download-desc">Disponible en dispositivos móviles para jugar en cualquier lugar.</p>
-    </div>
+/* Contenedor general */
+.content-box {
+  max-width: 1100px;
+  margin: 120px auto;
+  padding: 40px;
+  background: rgba(15,23,42,0.85);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
 
-    <!-- Columna derecha -->
-    <div class="specs-column">
-      <h3>Especificaciones del juego</h3>
-      <p><strong>Cantidad de jugadores:</strong> 1-4 jugadores</p>
-      <p><strong>Soporte para mandos:</strong> Sí</p>
-      <p><strong>Género:</strong> Acción, Free to Play, Party Game</p>
-      <p><strong>Desarrollador:</strong> Jhondy Games</p>
-      <p><strong>Estreno:</strong> 11 de noviembre, 2025</p>
-      <p><strong>Compras dentro de la aplicación:</strong> No</p>
-      <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
-    </div>
-  </main>
+/* Botones */
+.download-btn {
+  display: block;
+  background: #1e3a8a;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 25px 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
 
-<!-- 🔹 Footer -->
+.download-btn:hover {
+  background: #3b82f6;
+  transform: translateY(-3px);
+}
+
+.download-desc {
+  font-size: 0.95em;
+  color: #cbd5e1;
+  margin-bottom: 25px;
+}
+
+/* Características */
+.specs {
+  background: rgba(30,58,138,0.35);
+  border-radius: 12px;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+.specs h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  border-left: 5px solid #3b82f6;
+  padding-left: 10px;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+  .content-box {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="content-box">
+  <!-- Columna izquierda: descargas -->
+  <div>
+    <a href="https://play.google.com/store/apps/dev?id=8802051905426223782" class="download-btn">
+      Descargar para Android <br>
+      <small>Tamaño: 121 MB | Última versión: 0.1</small>
+    </a>
+    <p class="download-desc">Disponible en dispositivos móviles para jugar en cualquier lugar.</p>
+
+    <a href="https://jhondy.itch.io/" class="download-btn">
+      Descargar para PC <br>
+      <small>Tamaño: 66.4 MB | Última versión: 0.1</small>
+    </a>
+    <p class="download-desc">Disponible en PC para jugar cómodamente en tu ordenador.</p>
+  </div>
+
+  <!-- Columna derecha: especificaciones -->
+  <div class="specs">
+    <h3>Especificaciones del juego</h3>
+    <p><strong>Cantidad de jugadores:</strong> 1-4 jugadores</p>
+    <p><strong>Soporte para mandos:</strong> Sí</p>
+    <p><strong>Género:</strong> Acción, Free to Play, Party Game</p>
+    <p><strong>Desarrollador:</strong> Jhondy Games</p>
+    <p><strong>Estreno:</strong> 11 de noviembre, 2025</p>
+    <p><strong>Compras dentro de la aplicación:</strong> No</p>
+    <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
+  </div>
+</div>
+
+</body>
+
+  <!-- 🔹 Footer -->
 <footer class="site-footer">
   <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
   <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos, todos los recursos relacionados fueron generados con inteligencia artificial.</p>
@@ -154,5 +170,4 @@
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="discord"> 
       </a>
   </div>
-</body>
 </html>
