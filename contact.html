@@ -5,33 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contacto - Super Streamers Arena</title>
 
+<!-- Icono -->
 <link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/icono0.png">
+
+<!-- Tipografías -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- CSS principal -->
 <link rel="stylesheet" href="style.css">
+
+<!-- Estilos específicos de contacto -->
 <style>
-/* Ajustes para la grid */
+/* 🗂 Layout de Contacto */
 .contact-grid {
     display: flex;
-    justify-content: center; /* Centrado columnas */
+    justify-content: center;
     align-items: flex-start;
-    gap: 40px; /* separación entre columnas */
+    gap: 40px;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* 🔹 Cuadros de contenido */
 .content-box {
     background: rgba(255,255,255,0.05);
     padding: 25px;
     border-radius: 12px;
-    flex: 1 1 350px; /* cada caja ocupa espacio flexible */
+    flex: 1 1 350px;
     max-width: 500px;
-    text-align: left; /* todo el contenido alineado a la izquierda */
+    text-align: left;
+    color: #fff;
 }
 
-/* Forzar gif centrado */
+/* GIF centrado en donaciones */
 .content-box img {
     display: block;
     margin: 0 auto 20px;
@@ -58,7 +67,7 @@
 
 /* Separación entre header y contenido */
 main.contact-section {
-    margin-top: 40px;
+    margin-top: 100px; /* espacio para header fijo */
     margin-bottom: 40px;
 }
 
@@ -76,11 +85,12 @@ main.contact-section {
 </head>
 <body class="contact-page">
 
-<!-- Header igual que index.html -->
+<!-- 🔹 Header -->
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="./">
-      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/icono0.png" alt="Super Streamers Arena" class="brand-logo">
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/icono0.png" 
+           alt="Super Streamers Arena" class="brand-logo">
       <span class="brand-title">Super Streamers Arena</span>
     </a>
     <nav id="nav" class="site-nav">
@@ -95,52 +105,47 @@ main.contact-section {
   </div>
 </header>
 
+<!-- 🔹 Main -->
 <main class="section wrap contact-section">
   <div class="contact-grid">
-    
-<!-- 🔹 Donaciones -->
-<div class="content-box">
-  <h2 style="margin-bottom:15px;">Apoya el proyecto</h2>
 
-  <!-- GIF animado -->
-  <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/animation0.gif" 
-       alt="Apoya el proyecto"
-       style="max-width:220px; margin-bottom:20px;">
+    <!-- 🔹 Donaciones -->
+    <div class="content-box">
+      <h2 style="margin-bottom:15px;">Apoya el proyecto</h2>
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/animation0.gif" 
+           alt="Apoya el proyecto"
+           style="max-width:220px; margin-bottom:20px;">
+      <p style="margin-bottom:15px;">
+        Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.  
+        Todo lo recaudado irá directamente a mejorar el proyecto 🙌
+      </p>
+      <div class="paypal-center">
+        <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank"
+           class="paypal-btn">
+          Donar con PayPal
+        </a>
+      </div>
+    </div>
 
-  <p style="margin-bottom:15px;">
-    Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.  
-    Todo lo recaudado irá directamente a mejorar el proyecto 🙌
-  </p>
-  
-  <div class="paypal-center">
-    <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank"
-       class="paypal-btn">
-      Donar con PayPal
-    </a>
-  </div>
-</div>
+    <!-- 🔹 Contactos -->
+    <div class="content-box">
+      <h2 style="margin-bottom:15px;">Contactos y enlaces</h2>
+      <p>¡Hola! Puedes seguirme y contactarme a través de mis redes y plataformas:</p>
+      <div style="margin-top:25px; line-height:2;">
+        <p>Youtube: <a class="social-link" href="https://www.youtube.com/@Jhondy" target="_blank">@Jhondy</a></p>
+        <p>Twitter: <a class="social-link" href="https://jhondy.itch.io/" target="_blank">@Jhondy</a></p>
+        <p>Discord: <a class="social-link" href="https://discord.gg/55fvyBf5" target="_blank">@Jhondy</a></p>	
+        <p>Google Play: <a class="social-link" href="https://play.google.com/store/apps/dev?id=8802051905426223782" target="_blank">Jhondy_Games</a></p>
+      </div>
+    </div>
 
-<!-- 🔹 Contactos -->
-<div class="content-box">
-  <h2 style="margin-bottom:15px;">Contactos y enlaces</h2>
-  <p>¡Hola! Puedes seguirme y contactarme a través de mis redes y plataformas:</p>
-
-  <div style="margin-top:25px; line-height:2;">
-    <p>Youtube: <a class="social-link" href="https://www.youtube.com/@Jhondy" target="_blank">@Jhondy</a></p>
-    <p>Twitter: <a class="social-link" href="https://jhondy.itch.io/" target="_blank">@Jhondy</a></p>
-    <p>Discord: <a class="social-link" href="https://discord.gg/55fvyBf5" target="_blank">@Jhondy</a></p>	
-    <p>Google Play: <a class="social-link" href="https://play.google.com/store/apps/dev?id=8802051905426223782" target="_blank">Jhondy_Games</a></p>
-  </div>
-</div>
-    
   </div>
 </main>
 
-<!-- Footer igual que index.html -->
+<!-- 🔹 Footer -->
 <footer class="site-footer">
   <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
   <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos, todos los recursos relacionados fueron generados con inteligencia artificial.</p>
-
   <div class="social-icons">
       <a href="https://www.youtube.com/@Jhondy" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/social1.png" alt="youtube"> 
