@@ -114,6 +114,7 @@ h2 {
   margin-bottom: 40px;
   backdrop-filter: blur(6px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  text-align: left; /* forzar contenido alineado a la izquierda */
 }
 
 /* 🎠 Carousel */
@@ -343,3 +344,4 @@ h2 {
   .logo-side { display: none; }
   .site-nav a { font-size: 14px; }
 }
+
