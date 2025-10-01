@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Actualizaciones - Super Streamers Arena</title>
+<title>Política de Privacidad - Super Streamers Arena</title>
 
 <!-- Icono -->
 <link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png">
@@ -15,65 +15,33 @@
 <!-- CSS principal -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Estilos específicos del changelog (scoped a esta página) -->
+<!-- Estilos propios de policy -->
 <style>
-  /* Separación entre header y contenido (mismo criterio que contact) */
-  main.changelog-section {
+  main.policy-section {
     margin-top: 100px;
     margin-bottom: 40px;
   }
-
-  /* Caja título principal del changelog */
-  .changelog-hero h1 {
+  .policy-hero h1 {
     margin-bottom: 6px;
     font-family: 'Orbitron', sans-serif;
   }
-  .changelog-hero p {
+  .policy-hero p {
     color: var(--text-muted);
-  }
-
-  /* Entradas del diario */
-  .dev-entry {
-    position: relative;
-  }
-  .dev-entry h3 {
-    margin: 0 0 6px 0;
-  }
-  .dev-entry .meta {
-    color: var(--text-muted);
-    font-size: 0.95em;
     margin-bottom: 20px;
   }
-  .dev-entry p {
+  .policy-list {
     line-height: 1.7;
+    margin-left: 20px;
   }
-
-  /* Etiqueta NUEVO en la más reciente */
-  .badge-new {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: #2563eb;
-    color: #fff;
-    font-size: 0.75em;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 8px;
-    letter-spacing: 0.5px;
-  }
-
-  /* Mini guía de edición (opcional) */
-  .edit-hint {
-    font-size: 0.9em;
-    color: var(--text-muted);
-    margin-top: 8px;
+  .policy-list li {
+    margin-bottom: 10px;
   }
 </style>
 </head>
-<body class="changelog-page">
+<body class="policy-page">
 
 <script>
-  // mismo ajuste que usas en otras páginas para el header fijo
+  // Ajuste de padding para header fijo
   function ajustarPaddingBody() {
     const header = document.querySelector('.site-header');
     const body = document.body;
@@ -92,7 +60,7 @@
   window.addEventListener('resize', ajustarPaddingBody);
 </script>
 
-<!-- 🔹 Header (igual al de contact) -->
+<!-- 🔹 Header -->
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="./">
@@ -106,41 +74,56 @@
           <li><a href="./changelog.html">Actualizaciones</a></li>
           <li><a href="./faq.html">Consulta</a></li>
           <li><a href="./contact.html">Contacto</a></li>
-          <li><a href="./policy.html">Política</a></li>
+          <li><a href="./policy.html" class="active">Política</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<!-- 🔹 Main -->
-<main class="section wrap changelog-section">
-  <!-- Cabecera del changelog -->
-  <div class="content-box changelog-hero">
-    <h1>Diario de Desarrollo</h1>
-    <p>Notas de versión, avances y mensajes del desarrollador.</p>
+<!-- 🔹 Contenido principal -->
+<main class="policy-section wrap">
+  <div class="policy-hero">
+    <h1>Política de Privacidad</h1>
+    <p>En <strong>Super Streamers Arena</strong> respetamos la privacidad de nuestros jugadores. Esta página explica cómo se manejan los datos dentro del juego.</p>
   </div>
 
-  <!-- Entrada más reciente -->
-  <article class="content-box dev-entry">
-    <span class="badge-new">NUEVO</span>
-    <h3>🎮 Primeros comentarios de la comunidad</h3>
-    <div class="meta">15 de noviembre, 2025</div>
-    <p>
-      Tras el estreno, recopilamos <strong>feedback</strong> de los jugadores y ya estamos puliendo
-      la experiencia online, corrigiendo errores menores y preparando <strong>nuevos modos</strong>.
-      ¡Gracias por todo el apoyo y por compartir sugerencias!
-    </p>
-  </article>
+  <h2>1. Información que recopilamos</h2>
+  <ul class="policy-list">
+    <li>No recopilamos datos personales sensibles (nombre, correo, teléfono).</li>
+    <li>Podemos recolectar información anónima de uso (progreso, errores, estadísticas) para mejorar la experiencia.</li>
+  </ul>
 
-  <!-- Entrada anterior -->
-  <article class="content-box dev-entry">
-    <h3>🚀 Estreno oficial de Super Streamers Arena</h3>
-    <div class="meta">11 de noviembre, 2025</div>
-    <p>
-      Se ha lanzado oficialmente el videojuego <strong>Super Streamers Arena</strong> (SSA). Este apartado será utilizado para compartirles novedades previas al lanzamiento de la siguiente versión del videojuego o alguna noticia sumamente importante que impacte el estado actual y a futuro del juego, para mi es muy importante recibir el feedback de cada jugador, por lo que de alguna manera, estaré compartiendo un apartado de opiniones o críticas constructivas. 
-      Ah, otra cosa, estoy regalando códigos para cangearlos por mogemas a los que visiten los videos lanzados en las redes sociales, así que no dejes de seguirme para estar al tanto de más regalos y novedades.
-    </p>
-  </article>
+  <h2>2. Uso de la información</h2>
+  <ul class="policy-list">
+    <li>Se utiliza solo con fines de mejora del juego y estabilidad.</li>
+    <li>No vendemos ni compartimos datos con terceros.</li>
+  </ul>
+
+  <h2>3. Permisos solicitados</h2>
+  <ul class="policy-list">
+    <li>Acceso a Internet para funciones en línea (multijugador, tablas de puntuaciones, actualizaciones).</li>
+    <li>No pedimos permisos innecesarios.</li>
+  </ul>
+
+  <h2>4. Publicidad y compras</h2>
+  <ul class="policy-list">
+    <li>Actualmente no hay publicidad invasiva ni compras con dinero real.</li>
+    <li>Si en el futuro se añaden, se notificará al usuario y se actualizará esta política.</li>
+  </ul>
+
+  <h2>5. Derechos del usuario</h2>
+  <ul class="policy-list">
+    <li>El jugador puede desinstalar el juego en cualquier momento, eliminando los datos locales.</li>
+    <li>Se puede solicitar información o soporte a través de nuestros medios de contacto.</li>
+  </ul>
+
+  <h2>6. Cambios en la política</h2>
+  <p>Podemos actualizar esta política en cualquier momento. Los cambios estarán disponibles en esta misma página.</p>
+
+  <h2>7. Contacto</h2>
+  <p>Si tienes dudas sobre esta política, contáctanos en:</p>
+  <p><strong>Correo:</strong> jhondydario.dev@gmail.com</p>
+  <p><strong>Itch.io:</strong> <a href="https://jhondy.itch.io/" target="_blank">https://jhondy.itch.io/</a></p>
 </main>
 
 <!-- 🔹 Footer -->
