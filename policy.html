@@ -20,20 +20,35 @@
   main.policy-section {
     margin-top: 100px;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
   }
-  .policy-hero h1 {
-    margin-bottom: 6px;
-    font-family: 'Orbitron', sans-serif;
-  }
-  .policy-hero p {
-    color: var(--text-muted);
-    margin-bottom: 20px;
-  }
-  .policy-list {
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 700px;
+    color: #fff;
     line-height: 1.7;
-    margin-left: 20px;
+    text-align: left;
   }
-  .policy-list li {
+
+  .content-box h1, .content-box h2 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .content-box p {
+    margin-bottom: 15px;
+  }
+
+  .content-box ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  .content-box li {
     margin-bottom: 10px;
   }
 </style>
@@ -82,48 +97,48 @@
 
 <!-- 🔹 Contenido principal -->
 <main class="policy-section wrap">
-  <div class="policy-hero">
+  <div class="content-box">
     <h1>Política de Privacidad</h1>
     <p>En <strong>Super Streamers Arena</strong> respetamos la privacidad de nuestros jugadores. Esta página explica cómo se manejan los datos dentro del juego.</p>
+
+    <h2>1. Información que recopilamos</h2>
+    <ul>
+      <li>No recopilamos datos personales sensibles (nombre, correo, teléfono).</li>
+      <li>Podemos recolectar información anónima de uso (progreso, errores, estadísticas) para mejorar la experiencia.</li>
+    </ul>
+
+    <h2>2. Uso de la información</h2>
+    <ul>
+      <li>Se utiliza solo con fines de mejora del juego y estabilidad.</li>
+      <li>No vendemos ni compartimos datos con terceros.</li>
+    </ul>
+
+    <h2>3. Permisos solicitados</h2>
+    <ul>
+      <li>Acceso a Internet para funciones en línea (multijugador, tablas de puntuaciones, actualizaciones).</li>
+      <li>No pedimos permisos innecesarios.</li>
+    </ul>
+
+    <h2>4. Publicidad y compras</h2>
+    <ul>
+      <li>Actualmente no hay publicidad invasiva ni compras con dinero real.</li>
+      <li>Si en el futuro se añaden, se notificará al usuario y se actualizará esta política.</li>
+    </ul>
+
+    <h2>5. Derechos del usuario</h2>
+    <ul>
+      <li>El jugador puede desinstalar el juego en cualquier momento, eliminando los datos locales.</li>
+      <li>Se puede solicitar información o soporte a través de nuestros medios de contacto.</li>
+    </ul>
+
+    <h2>6. Cambios en la política</h2>
+    <p>Podemos actualizar esta política en cualquier momento. Los cambios estarán disponibles en esta misma página.</p>
+
+    <h2>7. Contacto</h2>
+    <p>Si tienes dudas sobre esta política, contáctanos en:</p>
+    <p><strong>Correo:</strong> jhondydario.dev@gmail.com</p>
+    <p><strong>Itch.io:</strong> <a href="https://jhondy.itch.io/" target="_blank">https://jhondy.itch.io/</a></p>
   </div>
-
-  <h2>1. Información que recopilamos</h2>
-  <ul class="policy-list">
-    <li>No recopilamos datos personales sensibles (nombre, correo, teléfono).</li>
-    <li>Podemos recolectar información anónima de uso (progreso, errores, estadísticas) para mejorar la experiencia.</li>
-  </ul>
-
-  <h2>2. Uso de la información</h2>
-  <ul class="policy-list">
-    <li>Se utiliza solo con fines de mejora del juego y estabilidad.</li>
-    <li>No vendemos ni compartimos datos con terceros.</li>
-  </ul>
-
-  <h2>3. Permisos solicitados</h2>
-  <ul class="policy-list">
-    <li>Acceso a Internet para funciones en línea (multijugador, tablas de puntuaciones, actualizaciones).</li>
-    <li>No pedimos permisos innecesarios.</li>
-  </ul>
-
-  <h2>4. Publicidad y compras</h2>
-  <ul class="policy-list">
-    <li>Actualmente no hay publicidad invasiva ni compras con dinero real.</li>
-    <li>Si en el futuro se añaden, se notificará al usuario y se actualizará esta política.</li>
-  </ul>
-
-  <h2>5. Derechos del usuario</h2>
-  <ul class="policy-list">
-    <li>El jugador puede desinstalar el juego en cualquier momento, eliminando los datos locales.</li>
-    <li>Se puede solicitar información o soporte a través de nuestros medios de contacto.</li>
-  </ul>
-
-  <h2>6. Cambios en la política</h2>
-  <p>Podemos actualizar esta política en cualquier momento. Los cambios estarán disponibles en esta misma página.</p>
-
-  <h2>7. Contacto</h2>
-  <p>Si tienes dudas sobre esta política, contáctanos en:</p>
-  <p><strong>Correo:</strong> jhondydario.dev@gmail.com</p>
-  <p><strong>Itch.io:</strong> <a href="https://jhondy.itch.io/" target="_blank">https://jhondy.itch.io/</a></p>
 </main>
 
 <!-- 🔹 Footer -->
