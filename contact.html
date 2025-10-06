@@ -16,165 +16,134 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
-  :root{
-    --bg-alt: rgba(0,0,0,0.55);
-    --accent: #38bdf8;
-    --accent-strong: #0ea5e9;
-    --text-light: #ffffff;
-  }
+/* 🗂 Layout general */
+main.contact-section {
+  margin-top: 120px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-  /* evitar overflow y sumar el box-sizing en todo */
-  *, *::before, *::after { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; width: 100%; overflow-x: hidden; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
-  img { max-width: 100%; height: auto; display: block; }
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 1200px;
+  padding: 20px;
+}
 
-  /* 🗂 Layout general - alineado con FAQ */
+/* 🔹 Cuadros */
+.content-box {
+  background: rgba(0,0,0,0.55);
+  padding: 35px 40px;
+  border-radius: 14px;
+  flex: 1 1 350px;
+  max-width: 500px;
+  text-align: left;
+  color: #fff;
+  line-height: 1.7;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.content-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.content-box p {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+/* GIF centrado */
+.content-box img {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+/* 🔸 Botón de PayPal */
+.paypal-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.paypal-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f2c94c, #b68900);
+  color: #111;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 10px rgba(255, 200, 50, 0.4);
+}
+.paypal-btn:hover {
+  background: linear-gradient(135deg, #ffd95e, #a87900);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 94, 0.6);
+}
+
+/* 🔗 Enlaces de redes */
+.social-link {
+  color: #4ea0f0; /* azul original */
+  font-weight: 700;
+  text-decoration: none;
+}
+.social-link:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
   main.contact-section {
-    margin-top: 120px;
-    margin-bottom: 60px;
-    width: 100%;
-    max-width: 900px;           /* mismo ancho que FAQ */
-    padding: 0 20px;            /* espacio lateral igual al FAQ */
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 40px;
   }
-
   .contact-grid {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
   }
-
-  /* 🔹 Cuadros */
   .content-box {
-    background: var(--bg-alt);
-    padding: 35px 40px;
-    border-radius: 14px;
-    flex: 1 1 350px;
-    max-width: 500px;
-    text-align: left;
-    color: var(--text-light);
-    line-height: 1.7;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    border: 1px solid rgba(56, 189, 248, 0.25);
-    backdrop-filter: blur(8px);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    word-break: break-word;
+    width: 100%;
+    max-width: none;
+    padding: 25px 20px;
   }
-
-  .content-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.45);
-  }
-
-  .content-box h2 {
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-    color: var(--accent);
-  }
-
-  .content-box p {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 15px;
-    font-size: 1.05rem;
-    word-break: break-word;      /* evita que links o texto largo salgan del contenedor */
-    overflow-wrap: anywhere;
-  }
-
-  /* GIF centrado */
-  .content-box img { margin: 0 auto 20px; border-radius: 10px; }
-
-  /* 🔸 Botón de PayPal */
-  .paypal-center { text-align: center; margin-top: 20px; }
-
   .paypal-btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #f2c94c, #b68900);
-    color: #111;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    font-size: 1.05rem;
-    letter-spacing: 0.3px;
-    transition: all 0.25s ease;
-    box-shadow: 0 3px 10px rgba(255, 200, 50, 0.4);
+    padding: 11px 24px;
+    font-size: 1rem;
   }
-  .paypal-btn:hover {
-    background: linear-gradient(135deg, #ffd95e, #a87900);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 215, 94, 0.6);
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    padding: 20px 14px;
   }
-
-  /* 🔗 Enlaces de redes */
-  .social-link {
-    color: #4ea0f0;
-    font-weight: 700;
-    text-decoration: none;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-  }
-  .social-link:hover { text-decoration: underline; }
-
-  /* Footer social icons */
-  .social-icons img { max-width: 36px; height: auto; display: inline-block; }
-
-  /* Header basic (no rompe si ya lo tienes en style.css) */
-  .site-header { width: 100%; top: 0; left: 0; right: 0; }
-  .header-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
-  .brand { display:flex; align-items:center; gap:8px; text-decoration:none; color:inherit; }
-  .brand-logo { height: 40px; width: auto; display:block; }
-  .site-nav ul { list-style:none; margin:0; padding:0; display:flex; gap:12px; align-items:center; }
-  .site-nav a { text-decoration:none; color:inherit; font-weight:600; }
-
-  /* 📱 Responsive */
-  @media (max-width: 768px) {
-    main.contact-section {
-      margin-top: 100px;
-      margin-bottom: 40px;
-      padding: 0 15px;   /* igual que FAQ */
-      max-width: 100%;
-    }
-    .contact-grid {
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-    }
-    .content-box { width: 100%; max-width: none; padding: 25px 20px; }
-    .paypal-btn { padding: 11px 24px; font-size: 1rem; }
-  }
-
-  /* 📱 Móviles más pequeños - iguales al FAQ */
-  @media (max-width: 600px) {
-    main.contact-section {
-      margin: 100px 15px 40px 15px;
-      padding: 0;
-      max-width: 100%;
-    }
-    .contact-grid { gap: 20px; }
-    .content-box { padding: 22px 16px; }
-  }
-
+}
 </style>
 </head>
 <body class="contact-page">
 
 <script>
-  // Ajuste de padding para header fijo (si tu header está fijo en style.css)
+  // Ajuste de padding para header fijo
   function ajustarPaddingBody() {
     const header = document.querySelector('.site-header');
     const body = document.body;
-    if (!header) return;
-    const alturaHeader = header.offsetHeight || 0;
+    const alturaHeader = header.offsetHeight;
     const anchoVentana = window.innerWidth;
     let padding = anchoVentana <= 600 ? alturaHeader * 0.6 : alturaHeader * 0.25;
-    // aplica solo si no hay padding-top ya mayor (evita duplicar)
-    body.style.paddingTop = Math.max(parseFloat(getComputedStyle(body).paddingTop) || 0, padding) + 'px';
+    body.style.paddingTop = padding + 'px';
   }
   window.addEventListener('load', ajustarPaddingBody);
   window.addEventListener('resize', ajustarPaddingBody);
@@ -236,17 +205,17 @@
 </main>
 
 <!-- 🔹 Footer -->
-<footer class="site-footer" style="padding:28px 20px; text-align:center;">
+<footer class="site-footer">
   <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
   <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos. Todos los recursos relacionados fueron generados con inteligencia artificial.</p>
-  <div class="social-icons" style="margin-top:12px;">
+  <div class="social-icons">
       <a href="https://www.youtube.com/@Jhondy" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social1.png" alt="youtube"> 
       </a>
-      <a href="https://jhondy.itch.io/" target="_blank" style="margin-left:8px;">
+      <a href="https://jhondy.itch.io/" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social2.png" alt="itchio"> 
       </a>
-      <a href="https://discord.gg/55fvyBf5" target="_blank" style="margin-left:8px;">
+      <a href="https://discord.gg/55fvyBf5" target="_blank">
           <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="discord"> 
       </a>
   </div>
