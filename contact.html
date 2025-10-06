@@ -105,15 +105,16 @@ main.contact-section {
 }
 
 /* 📱 Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   main.contact-section {
-    margin: 100px 15px 40px 15px; /* igual que el FAQ */
+    margin-top: 100px;
+    margin-bottom: 40px;
   }
   .contact-grid {
-    width: 100%;
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
   }
-}
   .content-box {
     width: 100%;
     max-width: none;
@@ -128,6 +129,16 @@ main.contact-section {
 @media (max-width: 480px) {
   .content-box {
     padding: 20px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    width: 100%;
+    margin: 0 15px; /* 🟦 Añade margen lateral */
+  }
+  .content-box {
+    padding: 22px 16px; /* ajusta un poco el relleno interno */
   }
 }
 </style>
@@ -219,6 +230,6 @@ main.contact-section {
       </a>
   </div>
 </footer>
-
+  
 </body>
 </html>
