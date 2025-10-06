@@ -371,3 +371,12 @@ h2 {
   .carousel-controls .dots .dot { width: 10px; height: 10px; }
   .logos-container { margin-top: 140px; }
 }
+
+/* 📱 Corrección de ancho y márgenes en móviles (contact page) */
+body.contact-page, 
+.contact-section, 
+.contact-grid, 
+.content-box {
+  overflow-x: hidden;
+  max-width: 100%;
+}
