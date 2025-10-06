@@ -17,40 +17,91 @@
 
 <!-- Estilos propios de policy -->
 <style>
+  /* ===== Política de Privacidad - Optimización de espacio ===== */
   main.policy-section {
     margin-top: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .content-box {
-    background: rgba(0,0,0,0.5);
-    padding: 35px;
-    border-radius: 12px;
-    max-width: 1000px;
-    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 45px 50px;
+    border-radius: 14px;
+    width: 95%;
+    max-width: 1200px;
     color: #fff;
-    line-height: 1.7;
+    line-height: 1.8;
     text-align: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
   }
 
   .content-box h1, .content-box h2 {
     font-family: 'Orbitron', sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    line-height: 1.3;
   }
 
-  .content-box p {
+  .content-box h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .content-box h2 {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    color: #ffd95e;
+  }
+
+  .content-box p, .content-box li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
     margin-bottom: 15px;
   }
 
   .content-box ul {
-    margin-left: 20px;
+    margin-left: 25px;
     margin-bottom: 15px;
   }
 
-  .content-box li {
-    margin-bottom: 10px;
+  /* 🌐 Responsive: móvil */
+  @media (max-width: 768px) {
+    main.policy-section {
+      margin-top: 80px;
+      margin-bottom: 40px;
+      padding: 0 10px;
+    }
+
+    .content-box {
+      width: 100%;
+      max-width: none;
+      padding: 25px 20px;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
+    .content-box h1 {
+      font-size: 1.7rem;
+      margin-bottom: 20px;
+    }
+
+    .content-box h2 {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .content-box p, .content-box li {
+      font-size: 0.98rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content-box {
+      padding: 20px 14px;
+    }
   }
 </style>
 </head>
@@ -90,7 +141,7 @@
           <li><a href="./changelog.html">Actualizaciones</a></li>
           <li><a href="./faq.html">Consulta</a></li>
           <li><a href="./contact.html">Contacto</a></li>
-          <li><a href="./policy.html">Política</a></li>
+          <li><a href="./policy.html" class="active">Política</a></li>
       </ul>
     </nav>
   </div>
@@ -100,7 +151,7 @@
 <main class="policy-section wrap">
   <div class="content-box">
     <h1>Política de Privacidad</h1>
-    <p>En Super Streamers Arena respetamos la privacidad de nuestros jugadores. Esta página explica cómo se manejan los datos dentro del juego.</p>
+    <p>En <strong>Super Streamers Arena</strong> respetamos la privacidad de nuestros jugadores. Esta página explica cómo se manejan los datos dentro del juego.</p>
 
     <h2>1. Información que recopilamos</h2>
     <ul>
