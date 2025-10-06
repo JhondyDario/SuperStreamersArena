@@ -15,8 +15,11 @@
 <!-- CSS principal -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Estilos específicos de descargas -->
+<!-- Estilos específicos de descargas (incluye overrides móviles y notas) -->
 <style>
+/* ===========================
+   Estilos originales (tu CSS local para esta página)
+   =========================== */
 body {
   background: #0f172a;
   color: #fff;
@@ -30,7 +33,7 @@ body {
   display: block;
   width: 100%;
   max-width: 1200px;
-  margin: 100px auto 30px;
+  margin: 100px auto 30px; /* Nota: margen grande en desktop para separar header */
   border: 2px solid rgba(255,255,255,0.15);
   border-radius: 10px;
   overflow: hidden;
@@ -46,7 +49,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 40px;               /* <-- Este gap es grande y en móvil "come" espacio útil */
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
@@ -59,7 +62,7 @@ body {
   padding: 25px;
   border-radius: 12px;
   flex: 1 1 350px;
-  max-width: 500px;
+  max-width: 500px;        /* <-- Limita el ancho en pantallas chicas */
   text-align: left;
   color: #fff;
 }
@@ -75,7 +78,7 @@ body {
   font-weight: 600;
   border-radius: 10px;
   padding: 12px 18px;
-  width: 90%;
+  width: 90%;              /* <-- Forzado a 90% y luego max-width:320px limita aún más */
   max-width: 320px;
   margin: 15px auto;
   text-decoration: none;
@@ -96,7 +99,7 @@ body {
   transform: rotate(8deg) scale(1.1);
 }
 
-/* Responsive */
+/* Responsive original */
 @media (max-width: 768px) {
   .download-grid {
     flex-direction: column;
@@ -111,6 +114,87 @@ body {
 main.download-section {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+/* ===========================
+   OVERRIDES Y MEJORAS (MÓVIL)
+   - Estas reglas van al final para asegurarse que sobrescriban las anteriores.
+   - Comentarios explican por qué están aquí.
+   =========================== */
+
+/* Para pantallas tablet/móvil */
+@media (max-width: 768px) {
+
+  /* 1) Aseguramos que el wrapper use todo el ancho disponible
+     Esto evita que 'width:90%' del CSS global deje menos espacio del esperado. */
+  .wrap,
+  .download-grid {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 12px;   /* margen interno para que no pegue al borde del viewport */
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  /* 2) Reducimos el gap para que en columna no coma ancho util */
+  .download-grid {
+    gap: 16px; /* menos espacio entre columnas cuando están en columna */
+  }
+
+  /* 3) Quitamos el max-width fijo del .content-box para que ocupe el ancho */
+  /*    flex: none evita que el flex-basis imponga tamaños raros en móvil. */
+  .download-page .content-box,
+  .download-grid .content-box {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;       /* mantiene buen padding, pero más equilibrado */
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* 4) Botones: que llenen el ancho del .content-box en móvil.
+        - max-width: none para eliminar limitación de 320px.
+        - justify-content center para mejor apariencia. */
+  .playstore-button {
+    width: 100%;
+    max-width: none;
+    margin: 12px 0;
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  .playstore-button img {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+
+  /* 5) El banner no necesita tanto margen superior en móvil, así no empuja todo hacia abajo */
+  .banner-top {
+    margin: 60px auto 20px; /* menos que en desktop */
+  }
+
+  /* 6) Lectura más cómoda: tamaño de texto y line-height */
+  .content-box p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+/* Ajustes extra para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .wrap,
+  .download-grid {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .content-box {
+    padding: 16px;
+  }
+  .playstore-button {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
 }
 </style>
 </head>
