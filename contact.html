@@ -105,19 +105,18 @@ main.contact-section {
 }
 
 /* 📱 Responsive */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   main.contact-section {
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin: 100px 15px 40px 15px; /* igual que el FAQ */
   }
   .contact-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+    width: 100%;
+    margin: 0;
   }
+}
   .content-box {
     width: 100%;
-    max-width: 740px;
+    max-width: none;
     padding: 25px 20px;
   }
   .paypal-btn {
