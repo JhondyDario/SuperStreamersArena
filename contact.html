@@ -52,17 +52,27 @@
     margin-top: 15px;
 }
 .paypal-btn {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 8px;
-    background: #ffc439;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(90deg, #ffd54f, #ffc107); /* gradiente amarillo */
     color: #111;
     font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 18px;
+    width: 90%;
+    max-width: 320px;
+    margin: 15px auto;
     text-decoration: none;
-    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255,193,7,0.4);
+    transition: all 0.3s ease;
 }
+
 .paypal-btn:hover {
-    background: #e0ad2f;
+    background: linear-gradient(90deg, #ffca28, #ffb300);
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(255,179,0,0.6);
 }
 
 /* Separación entre header y contenido */
