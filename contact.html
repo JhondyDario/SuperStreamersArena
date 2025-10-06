@@ -52,17 +52,35 @@
     margin-top: 15px;
 }
 .paypal-btn {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #ffd54f, #ffc107); /* gradiente amarillo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(90deg, #ffd54f, #ffc107);
     color: #111;
     font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 18px;
+    width: 90%;
+    max-width: 320px;
+    margin: 15px auto;
     text-decoration: none;
-    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255,193,7,0.4);
+    transition: all 0.3s ease;
 }
+
 .paypal-btn:hover {
-    background: linear-gradient(135deg, #ffca28, #ffb300); /* gradiente más oscuro al pasar el mouse */
+    background: linear-gradient(90deg, #ffca28, #ffb300);
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(255,179,0,0.6);
+}
+
+.paypal-btn img {
+    transition: transform 0.3s ease;
+}
+
+.paypal-btn:hover img {
+    transform: rotate(8deg) scale(1.1);
 }
 
 /* Separación entre header y contenido */
@@ -141,12 +159,12 @@ main.contact-section {
         Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.</p>
       <p class="espaciado"> Todo lo recaudado irá directamente a mejorar el proyecto:
       </p>
-      <div class="paypal-center">
-        <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank"
-           class="paypal-btn">
-          Donar con PayPal
-        </a>
-      </div>
+<div class="paypal-center">
+  <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank" class="paypal-btn">
+    <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="PayPal" style="width:32px; height:32px;">
+    <span>Donar con PayPal</span>
+  </a>
+</div>
     </div>
 
     <!-- 🔹 Contactos -->
