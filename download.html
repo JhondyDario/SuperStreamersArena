@@ -17,69 +17,83 @@
 
 <!-- Estilos específicos de descargas -->
 <style>
+body {
+  background: #0f172a;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 Banner superior */
+.banner-top {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto 30px;
+  border: 2px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.banner-top img {
+  width: 100%;
+  display: block;
+}
+
+/* 🔹 Grid principal */
 .download-grid {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* 🔹 Cuadros */
 .content-box {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 12px;
-    flex: 1 1 350px;
-    max-width: 500px;
-    text-align: left;
-    color: #fff;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 12px;
+  flex: 1 1 350px;
+  max-width: 500px;
+  text-align: left;
+  color: #fff;
 }
 
-/* 🔹 Botones tipo Play Store */
+/* 🔹 Botones más oscuros con gradiente */
 .playstore-button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-    background: linear-gradient(90deg, #007bff, #00d4ff);
-    color: #fff;
-    font-weight: 600;
-    border-radius: 10px;
-    padding: 12px 18px;
-    width: 90%;
-    max-width: 320px;
-    margin: 15px auto;
-    text-decoration: none;
-    box-shadow: 0 0 15px rgba(0,123,255,0.4);
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  background: linear-gradient(90deg, #003b88, #005fa3);
+  color: #f1f1f1;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 18px;
+  width: 90%;
+  max-width: 320px;
+  margin: 15px auto;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0,95,163,0.4);
+  transition: all 0.3s ease;
 }
 .playstore-button:hover {
-    background: linear-gradient(90deg, #00d4ff, #007bff);
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0,212,255,0.6);
+  background: linear-gradient(90deg, #004c9e, #0091ff);
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(0,145,255,0.6);
 }
 .playstore-button img {
-    width: 36px;
-    height: 36px;
-    transition: transform 0.3s ease;
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
 }
 .playstore-button:hover img {
-    transform: rotate(8deg) scale(1.1);
-}
-
-/* 🔹 Bloque del Itch.io */
-.browser-box {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 12px;
-    max-width: 1050px;
-    margin: 20px auto;
-    text-align: center;
-    color: #fff;
+  transform: rotate(8deg) scale(1.1);
 }
 
 /* Responsive */
@@ -95,30 +109,23 @@
 
 /* Espaciado con header */
 main.download-section {
-    margin-top: 100px;
-    margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 </style>
 </head>
+
 <body class="download-page">
 
 <script>
   function ajustarPaddingBody() {
     const header = document.querySelector('.site-header');
-    const body = document.body;
+    if (!header) return;
     const alturaHeader = header.offsetHeight;
-
     const anchoVentana = window.innerWidth;
-    let padding;
-    if (anchoVentana <= 600) {
-      padding = alturaHeader * 0.5; // móvil
-    } else {
-      padding = alturaHeader * 0.25; // PC
-    }
-
-    body.style.paddingTop = padding + 'px';
+    let padding = anchoVentana <= 600 ? alturaHeader * 0.5 : alturaHeader * 0.25;
+    document.body.style.paddingTop = padding + 'px';
   }
-
   window.addEventListener('load', ajustarPaddingBody);
   window.addEventListener('resize', ajustarPaddingBody);
 </script>
@@ -142,6 +149,11 @@ main.download-section {
     </nav>
   </div>
 </header>
+
+<!-- 🔹 Banner superior -->
+<div class="banner-top">
+  <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/banners/banner1.png" alt="Banner Super Streamers Arena">
+</div>
 
 <!-- 🔹 Main -->
 <main class="section wrap download-section">
