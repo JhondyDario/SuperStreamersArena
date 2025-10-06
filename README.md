@@ -2,12 +2,6 @@
 
 Super Streamers Arena es un juego de peleas tipo arena con toques de party games, diseñado para partidas rápidas y divertidas con amigos. Personaliza tu streamer, desbloquea efectos especiales, sonidos únicos y librería de imágenes para destacar en cada partida. ¡Domina la tabla de visitas y demuestra quién es el mejor!
 
-🎮 Juega localmente con amigos o en multijugador online contra jugadores de todo el mundo.
-🏆 Completa retos y sube de nivel a tus streamers coleccionando todos los logros del juego.
-✨ Entra a la tienda de personalización para desbloquear skins, arenas y melodía del juego.
-📊 Gana visitas y sube posiciones gracias al sistema de puntos que te permi
-🎉 Consigue recompensas limitadas mediante los eventos especiales para la comunidad.
-
 Super Streamers Arena es ideal para partidas cortas pero emocionantes. No pierdas la oportunidad de jugar con personajes reencarnandos en Streamers coloridos y estilo arcade que enganchan desde el primer minuto. Es perfecto para compartir risas y diversión con amigos o jugadores de todo el mundo.
 
 Super Streamers Arena soporta jugar con mando, teclado y touch personalizado. Disfruta de poder jugar las partidas sin conexión obligatoria a internet y además puedes conseguir todo el contenido de la tienda sin pagar dinero real dentro del juego. El juego es totalmente gratuito y fue creado con muchos recursos libres de derechos de autor y con componente de inteligencia artificial.
