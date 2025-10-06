@@ -51,13 +51,14 @@
     text-align: center;
     margin-top: 15px;
 }
+/* 🔹 Botón PayPal estilo igual que descargas */
 .paypal-btn {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* igual que .playstore-button */
     gap: 12px;
-    background: linear-gradient(90deg, #ffd54f, #ffc107);
-    color: #111;
+    background: linear-gradient(90deg, #003b88, #005fa3); /* mismo gradiente azul */
+    color: #f1f1f1;
     font-weight: 600;
     border-radius: 10px;
     padding: 12px 18px;
@@ -65,17 +66,19 @@
     max-width: 320px;
     margin: 15px auto;
     text-decoration: none;
-    box-shadow: 0 0 15px rgba(255,193,7,0.4);
+    box-shadow: 0 0 15px rgba(0,95,163,0.4);
     transition: all 0.3s ease;
 }
 
 .paypal-btn:hover {
-    background: linear-gradient(90deg, #ffca28, #ffb300);
+    background: linear-gradient(90deg, #004c9e, #0091ff);
     transform: scale(1.06);
-    box-shadow: 0 0 25px rgba(255,179,0,0.6);
+    box-shadow: 0 0 25px rgba(0,145,255,0.6);
 }
 
 .paypal-btn img {
+    width: 36px;  /* igual que los botones de descarga */
+    height: 36px;
     transition: transform 0.3s ease;
 }
 
@@ -83,22 +86,19 @@
     transform: rotate(8deg) scale(1.1);
 }
 
-/* Separación entre header y contenido */
-main.contact-section {
-    margin-top: 100px; /* espacio para header fijo */
-    margin-bottom: 40px;
+/* Responsive: igual que los botones de descarga */
+@media (max-width: 768px) {
+    .paypal-btn {
+        width: 100%;
+        max-width: none;
+        justify-content: center;
+        padding: 12px 16px;
+    }
+    .paypal-btn img {
+        margin-right: 10px;
+    }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .content-box {
-    max-width: 100%;
-  }
-}
 </style>
 </head>
 <body class="contact-page">
