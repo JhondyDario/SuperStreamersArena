@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* 🔹 FAQ sección */
+    /* 🔹 Sección FAQ */
     .faq-section {
       max-width: 900px;
       margin: 140px auto 60px auto;
@@ -32,7 +32,6 @@
       padding-left: 12px;
     }
 
-    /* 🟡 Texto de instrucciones (alineado a la izquierda) */
     .faq-intro {
       text-align: left;
       color: var(--text-muted);
@@ -46,13 +45,22 @@
       margin-bottom: 16px;
       padding: 14px 20px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: all 0.35s ease;
       display: flex;
       align-items: flex-start;
       gap: 12px;
+      border: 1px solid transparent;
     }
 
-    .faq-item:hover { background: rgba(255,255,255,0.1); }
+    .faq-item:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .faq-item.active {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--accent);
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
 
     .faq-icon {
       width: 28px;
@@ -61,43 +69,39 @@
       margin-top: 2px;
     }
 
-    .faq-question { font-weight: 600; color: var(--accent); }
+    .faq-question {
+      font-weight: 600;
+      color: var(--accent);
+    }
 
     .faq-answer {
-      display: none;
-      margin-top: 8px;
+      max-height: 0;
+      overflow: hidden;
+      margin-top: 6px;
       color: var(--text-light);
-      padding-left: 40px;
+      padding-left: 24px;
+      line-height: 1.6;
+      transition: all 0.35s ease;
+      opacity: 0;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      opacity: 1;
+      padding-left: 28px;
     }
 
     @media(max-width:600px){
-      .faq-section { margin: 100px 15px 40px 15px; }
-      .faq-answer { padding-left: 32px; }
+      .faq-section {
+        margin: 100px 15px 40px 15px;
+      }
+      .faq-answer {
+        padding-left: 18px;
+      }
     }
   </style>
 </head>
 <body>
-
-<script>
-  function ajustarPaddingBody() {
-    const header = document.querySelector('.site-header');
-    const body = document.body;
-    const alturaHeader = header.offsetHeight;
-
-    const anchoVentana = window.innerWidth;
-    let padding;
-    if (anchoVentana <= 600) {
-      padding = alturaHeader * 0.5; // móvil
-    } else {
-      padding = alturaHeader * 0.25; // PC
-    }
-
-    body.style.paddingTop = padding + 'px';
-  }
-
-  window.addEventListener('load', ajustarPaddingBody);
-  window.addEventListener('resize', ajustarPaddingBody);
-</script>
 
   <!-- 🔹 Header -->
   <header class="site-header">
@@ -111,7 +115,7 @@
           <li><a href="./">Inicio</a></li>
           <li><a href="./download.html">Descargar</a></li>
           <li><a href="./changelog.html">Actualizaciones</a></li>
-          <li><a href="./faq.html">Consulta</a></li>
+          <li><a href="./faq.html" class="active">Consulta</a></li>
           <li><a href="./contact.html">Contacto</a></li>
           <li><a href="./policy.html">Política</a></li>
         </ul>
@@ -119,66 +123,64 @@
     </div>
   </header>
 
-<!-- 🔹 FAQ -->
-<main class="faq-section">
-  <h1>Preguntas frecuentes</h1>
-  <p class="faq-intro">
-    Pulsa una de las preguntas para leer la respuesta:
-  </p>
+  <!-- 🔹 FAQ -->
+  <main class="faq-section">
+    <h1>Preguntas frecuentes</h1>
+    <p class="faq-intro">Pulsa una pregunta para leer la respuesta:</p>
 
-  <div class="faq-item">
-    <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
-    <div>
-      <div class="faq-question">¿Cuáles plataformas soporta el juego?</div>
-      <div class="faq-answer">Está disponible para dispositivos Android en Google Play y en PC desde itch.io, con más plataformas planeadas próximamente.</div>
+    <div class="faq-item">
+      <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
+      <div>
+        <div class="faq-question">¿Cuáles plataformas soporta el juego?</div>
+        <div class="faq-answer">Está disponible para dispositivos Android en Google Play y en PC desde itch.io, con más plataformas planeadas próximamente.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
-    <div>
-      <div class="faq-question">¿Puedo jugar online con mis amigos?</div>
-      <div class="faq-answer">Sí, hay modos multijugador online y local para partidas rápidas. Puedes crear o unirte a salas públicas y privadas.</div>
+    <div class="faq-item">
+      <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
+      <div>
+        <div class="faq-question">¿Puedo jugar online con mis amigos?</div>
+        <div class="faq-answer">Sí, hay modos multijugador online y local para partidas rápidas. Puedes crear o unirte a salas públicas y privadas.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
-    <div>
-      <div class="faq-question">¿Cómo personalizo a mi streamer?</div>
-      <div class="faq-answer">Desbloquea atuendos especiales, accesorios y efectos desde la tienda del juego. Todas las compras se pueden adquirir gratuitamente con la moneda del juego.</div>
+    <div class="faq-item">
+      <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
+      <div>
+        <div class="faq-question">¿Cómo personalizo a mi streamer?</div>
+        <div class="faq-answer">Desbloquea atuendos especiales, accesorios y efectos desde la tienda del juego. Todas las compras se pueden adquirir gratuitamente con la moneda del juego.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
-    <div>
-      <div class="faq-question">¿El juego es gratuito?</div>
-      <div class="faq-answer">Sí, completamente gratuito, sin pagos obligatorios. Puedes reportar desde el soporte del juego o mediante el servidor oficial de Discord cualquier uso indebido.</div>
+    <div class="faq-item">
+      <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
+      <div>
+        <div class="faq-question">¿El juego es gratuito?</div>
+        <div class="faq-answer">Sí, completamente gratuito, sin pagos obligatorios. Puedes reportar desde el soporte del juego o mediante el servidor oficial de Discord cualquier uso indebido.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
-    <div>
-      <div class="faq-question">¿Dónde reporto errores o bugs?</div>
-      <div class="faq-answer">A través de la opción de soporte dentro del juego o usando el servidor oficial de Discord.</div>
+    <div class="faq-item">
+      <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
+      <div>
+        <div class="faq-question">¿Dónde reporto errores o bugs?</div>
+        <div class="faq-answer">A través de la opción de soporte dentro del juego o usando el servidor oficial de Discord.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="faq-item">
-    <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
-    <div>
-      <div class="faq-question">¿Habrá actualizaciones frecuentes?</div>
-      <div class="faq-answer">Sí, con nuevos modos de juego, personajes y eventos especiales. No olvides seguir las redes sociales para estar al día con las novedades.</div>
+    <div class="faq-item">
+      <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
+      <div>
+        <div class="faq-question">¿Habrá actualizaciones frecuentes?</div>
+        <div class="faq-answer">Sí, con nuevos modos de juego, personajes y eventos especiales. No olvides seguir las redes sociales para estar al día con las novedades.</div>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
 
   <!-- 🔹 Footer -->
   <footer class="site-footer">
     <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
-    <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos, todos los recursos relacionados fueron generados con inteligencia artificial.</p>
+    <p>El videojuego es un proyecto estrictamente gratuito y no respaldamos ningún producto vendido con fines lucrativos; todos los recursos relacionados fueron generados con inteligencia artificial.</p>
 
     <div class="social-icons">
       <a href="https://www.youtube.com/@Jhondy" target="_blank">
@@ -193,18 +195,18 @@
     </div>
   </footer>
 
-  <!-- 🔹 Script acordeón FAQ -->
+  <!-- 🔹 Script acordeón con efecto -->
   <script>
     const faqItems = document.querySelectorAll('.faq-item');
+
     faqItems.forEach(item => {
       item.addEventListener('click', () => {
-        const answer = item.querySelector('.faq-answer');
-        const isVisible = answer.style.display === 'block';
-        faqItems.forEach(i => i.querySelector('.faq-answer').style.display = 'none');
-        answer.style.display = isVisible ? 'none' : 'block';
+        const isActive = item.classList.contains('active');
+
+        faqItems.forEach(i => i.classList.remove('active')); // Cierra todas
+        if (!isActive) item.classList.add('active'); // Abre la seleccionada
       });
     });
   </script>
-
 </body>
 </html>
