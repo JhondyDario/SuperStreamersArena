@@ -8,7 +8,9 @@
   <!-- Icono -->
   <link rel="icon" href="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png">
 
-  <link rel="stylesheet" href="style.css"> <!-- tu CSS existente -->
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
     /* 🔹 FAQ sección */
     .faq-section {
@@ -24,10 +26,18 @@
     .faq-section h1 {
       font-family: 'Orbitron', sans-serif;
       color: var(--text-light);
-      text-align: left; /* alineación a la izquierda */
+      text-align: left;
       margin-bottom: 12px;
       border-left: 6px solid var(--accent);
       padding-left: 12px;
+    }
+
+    /* 🟡 Texto de instrucciones (alineado a la izquierda) */
+    .faq-intro {
+      text-align: left;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      font-family: 'Poppins', sans-serif;
     }
 
     .faq-item {
@@ -74,7 +84,6 @@
     const body = document.body;
     const alturaHeader = header.offsetHeight;
 
-    // Ajuste según tamaño de pantalla
     const anchoVentana = window.innerWidth;
     let padding;
     if (anchoVentana <= 600) {
@@ -113,7 +122,7 @@
 <!-- 🔹 FAQ -->
 <main class="faq-section">
   <h1>Preguntas frecuentes</h1>
-  <p style="text-align:center; color:var(--text-muted); margin-bottom:30px;">
+  <p class="faq-intro">
     Pulsa una de las preguntas para leer la respuesta:
   </p>
 
@@ -121,7 +130,7 @@
     <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
     <div>
       <div class="faq-question">¿Cuáles plataformas soporta el juego?</div>
-      <div class="faq-answer">Está disponible para dispositivos Android en Google play y en PC desde itch.io, con más plataformas planeadas próximamente.</div>
+      <div class="faq-answer">Está disponible para dispositivos Android en Google Play y en PC desde itch.io, con más plataformas planeadas próximamente.</div>
     </div>
   </div>
 
@@ -137,7 +146,7 @@
     <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
     <div>
       <div class="faq-question">¿Cómo personalizo a mi streamer?</div>
-      <div class="faq-answer">Desbloquea autendos especiales, accesorios y efectos especiales desde la tienda dentro del juego. Todas las compras se pueden adquirir gratuitamente con la moneda del juego.</div>
+      <div class="faq-answer">Desbloquea atuendos especiales, accesorios y efectos desde la tienda del juego. Todas las compras se pueden adquirir gratuitamente con la moneda del juego.</div>
     </div>
   </div>
 
@@ -145,7 +154,7 @@
     <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
     <div>
       <div class="faq-question">¿El juego es gratuito?</div>
-      <div class="faq-answer">Sí, completamente gratuito, sin pagos obligatorios. Te invito a reportar desde el soporte del juego o mediante el servidor oficial de Discord, cualquier uso inadecuado de descarga.</div>
+      <div class="faq-answer">Sí, completamente gratuito, sin pagos obligatorios. Puedes reportar desde el soporte del juego o mediante el servidor oficial de Discord cualquier uso indebido.</div>
     </div>
   </div>
 
@@ -153,15 +162,15 @@
     <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
     <div>
       <div class="faq-question">¿Dónde reporto errores o bugs?</div>
-      <div class="faq-answer">A través de la opción de soporte dentro del juego o usando el servidor de Discord oficial.</div>
+      <div class="faq-answer">A través de la opción de soporte dentro del juego o usando el servidor oficial de Discord.</div>
     </div>
   </div>
 
   <div class="faq-item">
     <img class="faq-icon" src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono1.png" alt="icono">
     <div>
-      <div class="faq-question">¿Habrá actualizaciones frecuentes para el juego?</div>
-      <div class="faq-answer">Sí, con nuevos modos de juego, personajes y eventos especiales para la comunidad. No olvides seguir las redes sociales para ponerte al día con las actualizaciones.</div>
+      <div class="faq-question">¿Habrá actualizaciones frecuentes?</div>
+      <div class="faq-answer">Sí, con nuevos modos de juego, personajes y eventos especiales. No olvides seguir las redes sociales para estar al día con las novedades.</div>
     </div>
   </div>
 </main>
