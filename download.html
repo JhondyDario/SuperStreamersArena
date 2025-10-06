@@ -39,16 +39,41 @@
     color: #fff;
 }
 
-/* 🔹 Imagen de Play Store */
-.playstore-btn {
-    display: block;
-    margin: 20px auto;
-    width: 220px;
-    transition: transform 0.2s ease, filter 0.3s ease;
+/* 🔹 Botones tipo Play Store */
+.playstore-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    background: #1d4ed8;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 18px;
+    width: 90%;
+    max-width: 320px;
+    margin: 15px auto;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
-.playstore-btn:hover {
+.playstore-button:hover {
+    background: #2563eb;
     transform: scale(1.05);
-    filter: brightness(1.15);
+}
+.playstore-button img {
+    width: 36px;
+    height: 36px;
+}
+
+/* 🔹 Bloque del iframe */
+.browser-box {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 1050px;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
 }
 
 /* Responsive */
@@ -59,6 +84,10 @@
   }
   .content-box {
     max-width: 100%;
+  }
+  iframe {
+    width: 100% !important;
+    height: 180px !important;
   }
 }
 
@@ -122,13 +151,15 @@ main.download-section {
       <p style="margin-bottom:20px;">Super Streamers Arena está disponible en:</p>
 
       <!-- 🔸 Android -->
-      <a href="#" target="_blank">
+      <a href="#" target="_blank" class="playstore-button">
         <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social4.png" alt="Google Play Android">
+        <span>Google Play Android</span>
       </a>
 
       <!-- 🔸 PC -->
-      <a href="#" target="_blank">
+      <a href="#" target="_blank" class="playstore-button">
         <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social4.png" alt="Google Play PC">
+        <span>Google Play PC</span>
       </a>
     </div>
 
@@ -144,6 +175,14 @@ main.download-section {
       <p><strong>Idiomas:</strong> Español e Inglés (pronto)</p>
     </div>
 
+  </div>
+
+  <!-- 🔹 Juega desde el navegador -->
+  <div class="browser-box">
+    <h2 style="margin-bottom:15px;">Juega desde el navegador</h2>
+    <iframe frameborder="0" src="https://itch.io/embed/3922575?linkback=true&amp;bg_color=171427&amp;fg_color=d0cdcd&amp;link_color=6e5bfa&amp;border_color=20252b" width="552" height="167">
+      <a href="https://jhondy.itch.io/super-streamers-arena">Super Streamers Arena by Jhondy</a>
+    </iframe>
   </div>
 </main>
 
