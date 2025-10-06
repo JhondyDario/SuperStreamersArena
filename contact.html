@@ -18,11 +18,12 @@
 <style>
 /* 🗂 Layout general */
 main.contact-section {
-  margin-top: 120px;
-  margin-bottom: 60px;
+  margin: 140px auto 60px auto; /* igual que el FAQ */
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 900px; /* igual que el FAQ */
+  padding: 0 20px;
 }
 
 .contact-grid {
@@ -31,9 +32,7 @@ main.contact-section {
   align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
-  width: 95%;
-  max-width: 1200px;
-  padding: 20px;
+  width: 100%;
 }
 
 /* 🔹 Cuadros */
@@ -47,12 +46,21 @@ main.contact-section {
   color: #fff;
   line-height: 1.7;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.45);
 }
 
 .content-box h2 {
   font-family: 'Orbitron', sans-serif;
   margin-bottom: 15px;
   font-size: 1.5rem;
+  color: #38bdf8;
 }
 
 .content-box p {
@@ -104,11 +112,12 @@ main.contact-section {
   text-decoration: underline;
 }
 
-/* 📱 Responsive */
+/* 📱 Responsive general */
 @media (max-width: 768px) {
   main.contact-section {
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin: 100px auto 40px auto;
+    padding: 0 15px;
+    max-width: 95%;
   }
   .contact-grid {
     flex-direction: column;
@@ -126,18 +135,21 @@ main.contact-section {
   }
 }
 
-/* 📱 Ajuste estilo FAQ */
+/* 📱 Igualando estilo FAQ (móviles más pequeños) */
 @media (max-width: 600px) {
   main.contact-section {
-    margin: 100px 15px 40px 15px; /* igual que el FAQ */
+    margin: 100px 15px 40px 15px; /* mismo margen lateral */
+    max-width: 100%;
+    padding: 0;
   }
   .contact-grid {
     width: 100%;
     margin: 0;
     padding: 0;
+    gap: 20px;
   }
   .content-box {
-    padding: 22px 16px;
+    padding: 22px 18px;
   }
 }
 </style>
