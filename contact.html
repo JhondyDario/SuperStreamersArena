@@ -26,18 +26,19 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 /* 🔹 Cuadros de contenido */
 .content-box {
     background: rgba(255,255,255,0.05);
-    padding: 25px;
+    padding: 30px;
     border-radius: 12px;
     flex: 1 1 350px;
     max-width: 500px;
     text-align: left;
     color: #fff;
+    margin-top: 40px;
 }
 
 /* GIF centrado en donaciones */
@@ -76,11 +77,11 @@
 }
 
 .paypal-btn img {
-    display: block;       /* Fuerza que el icono se comporte como bloque */
-    vertical-align: middle; /* Alineación vertical adicional por si acaso */
-    width: 32px;
-    height: 32px;
-    margin: 0;            /* Elimina márgenes internos */
+    display: block;
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    margin: 0;
 }
 
 .paypal-btn:hover img {
@@ -92,9 +93,13 @@
   .contact-grid {
     flex-direction: column;
     align-items: center;
+    padding: 20px 10px;
   }
   .content-box {
     max-width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
   }
 }
 </style>
@@ -102,46 +107,42 @@
 <body class="contact-page">
 
 <script>
-  function ajustarPaddingBody() {
+function ajustarPaddingBody() {
     const header = document.querySelector('.site-header');
     const body = document.body;
     const alturaHeader = header.offsetHeight;
-
-    // Ajuste según tamaño de pantalla
     const anchoVentana = window.innerWidth;
     let padding;
     if (anchoVentana <= 600) {
-      padding = alturaHeader * 0.5; // móvil
+      padding = alturaHeader * 0.6; // más separación en móvil
     } else {
-      padding = alturaHeader * 0.25; // PC
+      padding = alturaHeader * 0.4; // PC
     }
-
     body.style.paddingTop = padding + 'px';
-  }
-
-  window.addEventListener('load', ajustarPaddingBody);
-  window.addEventListener('resize', ajustarPaddingBody);
+}
+window.addEventListener('load', ajustarPaddingBody);
+window.addEventListener('resize', ajustarPaddingBody);
 </script>
 
-  <!-- 🔹 Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="./">
-        <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
-        <span class="brand-title">Super Streamers Arena</span>
-      </a>
-      <nav id="nav" class="site-nav">
-        <ul>
-          <li><a href="./">Inicio</a></li>
-          <li><a href="./download.html">Descargar</a></li>
-          <li><a href="./changelog.html">Actualizaciones</a></li>
-          <li><a href="./faq.html">Consulta</a></li>
-          <li><a href="./contact.html">Contacto</a></li>
-          <li><a href="./policy.html">Política</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<!-- 🔹 Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/icons/icono0.png" alt="Super Streamers Arena" class="brand-logo">
+      <span class="brand-title">Super Streamers Arena</span>
+    </a>
+    <nav id="nav" class="site-nav">
+      <ul>
+        <li><a href="./">Inicio</a></li>
+        <li><a href="./download.html">Descargar</a></li>
+        <li><a href="./changelog.html">Actualizaciones</a></li>
+        <li><a href="./faq.html">Consulta</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
+        <li><a href="./policy.html">Política</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <!-- 🔹 Main -->
 <main class="section wrap contact-section">
@@ -155,14 +156,14 @@
            style="max-width:220px; margin-bottom:20px;">
       <p style="margin-bottom:15px;">
         Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.</p>
-      <p class="espaciado"> Todo lo recaudado irá directamente a mejorar el proyecto:
+      <p class="espaciado">Todo lo recaudado irá directamente a mejorar el proyecto:
       </p>
-<div class="paypal-center">
-  <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank" class="paypal-btn">
-    <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social3.png" alt="PayPal" style="width:32px; height:32px;">
-    <span>Donar con PayPal</span>
-  </a>
-</div>
+      <div class="paypal-center">
+        <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank" class="paypal-btn">
+          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social5.png" alt="PayPal">
+          <span>Donar con PayPal</span>
+        </a>
+      </div>
     </div>
 
     <!-- 🔹 Contactos -->
