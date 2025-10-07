@@ -93,12 +93,12 @@
   .contact-grid {
     flex-direction: column;
     align-items: center;
-    padding: 10px 5px;
+    padding: 20px 10px;
   }
   .content-box {
     max-width: 100%;
-    padding: 5px;
-    margin-top: 80px;
+    padding: 15px;
+    margin-top: 20px;
     border: none;
   }
 }
@@ -113,13 +113,16 @@ function ajustarPaddingBody() {
     const alturaHeader = header.offsetHeight;
     const anchoVentana = window.innerWidth;
     let padding;
+
     if (anchoVentana <= 600) {
-      padding = alturaHeader * 0.6; // más separación en móvil
+      padding = alturaHeader * 1.2; // móvil: más separación
     } else {
-      padding = alturaHeader * 0.4; // PC
+      padding = alturaHeader * 1.0; // PC: separación mayor
     }
+
     body.style.paddingTop = padding + 'px';
 }
+
 window.addEventListener('load', ajustarPaddingBody);
 window.addEventListener('resize', ajustarPaddingBody);
 </script>
