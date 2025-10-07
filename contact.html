@@ -26,19 +26,19 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: 30px 20px;
 }
 
 /* 🔹 Cuadros de contenido */
 .content-box {
     background: rgba(255,255,255,0.05);
-    padding: 15px;
+    padding: 30px;
     border-radius: 12px;
     flex: 1 1 350px;
     max-width: 500px;
     text-align: left;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 /* GIF centrado en donaciones */
@@ -115,9 +115,9 @@ function ajustarPaddingBody() {
     let padding;
 
     if (anchoVentana <= 600) {
-      padding = alturaHeader * 1.2; // móvil: más separación
+      padding = alturaHeader * 2.0; // móvil: separación más grande
     } else {
-      padding = alturaHeader * 1.0; // PC: separación mayor
+      padding = alturaHeader * 1.8; // PC: separación mucho más visible
     }
 
     body.style.paddingTop = padding + 'px';
