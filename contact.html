@@ -17,7 +17,7 @@
 
 <!-- Estilos específicos de contacto -->
 <style>
-/* 🗂 Layout de Contacto */
+/* 🗂 Layout general */
 .contact-grid {
   display: flex;
   justify-content: center;
@@ -52,36 +52,39 @@
   text-align: center;
   margin-top: 15px;
 }
-.paypal-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    background: linear-gradient(90deg, #ffd54f, #ffc107);
-    color: #111;
-    font-weight: 600;
-    border-radius: 10px;
-    padding: 12px 18px;
-    width: 90%;
-    max-width: 320px;
-    margin: 15px auto;
-    text-decoration: none;
-    box-shadow: 0 0 15px rgba(255,193,7,0.4);
-    transition: all 0.3s ease;
-}
 
-.paypal-btn:hover {
-    background: linear-gradient(90deg, #ffca28, #ffb300);
-    transform: scale(1.06);
-    box-shadow: 0 0 25px rgba(255,179,0,0.6);
+.paypal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #ffd54f, #ffc107);
+  color: #111;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px 18px;
+  width: 90%;
+  max-width: 320px;
+  margin: 15px auto;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(255,193,7,0.4);
+  transition: all 0.3s ease;
 }
 
 .paypal-btn img {
-    transition: transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.paypal-btn:hover {
+  background: linear-gradient(90deg, #ffca28, #ffb300);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,179,0,0.6);
 }
 
 .paypal-btn:hover img {
-    transform: rotate(8deg) scale(1.1);
+  transform: rotate(8deg) scale(1.1);
 }
 
 /* 🔹 Enlaces sociales */
@@ -100,16 +103,40 @@ main.contact-section {
   margin-bottom: 60px;
 }
 
-/* 🔹 Responsive */
+/* 🔹 Layout personalizado solo para móvil */
 @media (max-width: 768px) {
+  main.contact-section {
+    padding-left: 0px;
+    padding-top: 5px;
+    border-top-width: 10px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    margin-right: 15px;
+    margin-left: 25px;
+    border-left-width: 15px;
+    width: 330px;
+    border-right-width: 5px;
+    height: 810px;
+  }
+
   .contact-grid {
     flex-direction: column;
     align-items: center;
+    width: 315px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0;
+    border-right-width: 5px;
+    height: 920px;
   }
+
   .content-box {
-    max-width: 90%;
+    max-width: 100%;
     padding: 20px;
   }
+
   .paypal-btn {
     width: 100%;
   }
@@ -119,7 +146,7 @@ main.contact-section {
 
 <body class="contact-page">
 
-<!-- Ajuste automático de padding según el header -->
+<!-- Ajuste automático del padding según el header -->
 <script>
 function ajustarPaddingBody() {
   const header = document.querySelector('.site-header');
@@ -155,63 +182,30 @@ window.addEventListener('resize', ajustarPaddingBody);
 </header>
 
 <!-- 🔹 Main -->
-<main class="section wrap contact-section" style="
-    padding-left: 0px;
-    padding-top: 5px;
-    border-top-width: 10px;
-    padding-bottom: 5px;
-    padding-right: 0px;
-    margin-right: 15px;
-    margin-left: 25px;
-    border-left-width: 15px;
-    width: 330px;
-    border-right-width: 5px;
-    height: 810px;
-">
-  <div class="contact-grid" style="
-    width: 315px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
-    border-right-width: 5px;
-    height: 920px;
-">
+<main class="section wrap contact-section">
+  <div class="contact-grid">
 
     <!-- 🟡 Donaciones -->
-    <div class="content-box" style="height: 380px;width: 305px;padding-bottom: 0px;padding-left: 20px;padding-right: 20px;padding-top: 20px;">
+    <div class="content-box">
       <h2 style="margin-bottom:15px;">Apoya el proyecto</h2>
       <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/gifs/animation0.gif" alt="Apoya el proyecto" style="max-width:220px; margin-bottom:20px;">
       <p style="margin-bottom:15px;">
-        Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.</p>
-      <p class="espaciado"> Todo lo recaudado irá directamente a mejorar el proyecto:
+        Si te gusta mi trabajo y quieres apoyar el desarrollo del juego, puedes hacer una donación.
       </p>
-<div class="paypal-center">
-  <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank" class="paypal-btn" style="
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-">
-    <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social5.png" alt="PayPal" style="width:36px;height:36px;margin-bottom: 10px;margin-top: 10px;margin-left: 5px;margin-right: 5px;">
-    <span>Donar con PayPal</span>
-  </a>
-</div>
+      <p>Todo lo recaudado irá directamente a mejorar el proyecto:</p>
+
+      <div class="paypal-center">
+        <a href="https://www.paypal.com/donate/?hosted_button_id=9LUK8Y35X9JZJ" target="_blank" class="paypal-btn">
+          <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social5.png" alt="PayPal">
+          <span>Donar con PayPal</span>
+        </a>
+      </div>
     </div>
 
     <!-- 🔵 Contactos -->
-    <div class="content-box" style="
-    margin-bottom: 10px;
-    padding-bottom: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    margin-top: 0px;
-    height: 400px;
-">
+    <div class="content-box">
       <h2 style="margin-bottom:15px;">Contactos y enlaces</h2>
       <p>¿Cómo estás? Espero que bien. Recuerda que puedes seguirme o contactarme a través de mis redes:</p>
-
       <div style="margin-top:25px; line-height:2;">
         <p>Youtube: <a class="social-link" href="https://www.youtube.com/@Jhondy" target="_blank">@Jhondy</a></p>
         <p>Itch.io: <a class="social-link" href="https://jhondy.itch.io/" target="_blank">@Jhondy</a></p>
@@ -227,7 +221,6 @@ window.addEventListener('resize', ajustarPaddingBody);
 <footer class="site-footer">
   <p>El equipo <strong>Super Streamers Arena</strong> no está afiliado ni respaldado por ninguna figura pública.</p>
   <p>El videojuego es un proyecto gratuito. No respaldamos productos con fines lucrativos; todos los recursos fueron generados con inteligencia artificial.</p>
-
   <div class="social-icons">
     <a href="https://www.youtube.com/@Jhondy" target="_blank">
       <img src="https://raw.githubusercontent.com/JhondyDario/SuperStreamersArena/main/media/socials/social1.png" alt="youtube"> 
